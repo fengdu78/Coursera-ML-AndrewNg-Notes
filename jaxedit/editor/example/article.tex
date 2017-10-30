@@ -1,0 +1,35 @@
+%  -*- coding: utf-8 -*-
+% !TEX program = xelatex
+
+\documentclass{article}
+
+\newtheorem{thm}{Theorem}[section]
+
+\begin{document}
+
+\title{A Simple LaTeX Article}
+\author{JaxEdit Project}
+\date{January 12th, 2013}
+\maketitle
+
+\tableofcontents
+
+\section[Introduction]{Long Introduction}
+
+We have the Cauchy-Schwarz inequality:
+  \[ \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \]
+where $a_k$ and $b_k$ are real numbers, for any $k$.
+
+\section{Calculus}
+
+\begin{thm}
+If we have the following conditions:
+\begin{enumerate}
+\item $f(x)$ is continuous on $[a,b]$,
+\item $f(x)$ is differentiable on $(a,b)$,
+\item $f(a)$ and $f(b)$ are equal,
+\end{enumerate}
+Then there exists $\xi\in(a,b)$ such that $f'(\xi)=0$.
+\end{thm}
+
+\end{document}

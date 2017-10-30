@@ -80,11 +80,11 @@ Python 代码示例：
 
 代码：
 
-def computeCost(X, y, theta):
+`def computeCost(X, y, theta):`
 
-inner = np.power(((X \* theta.T) - y), 2)
+`inner = np.power(((X \* theta.T) - y), 2)`
 
-return np.sum(inner) / (2 \* len(X))
+`return np.sum(inner) / (2 \* len(X))`
 
 ### 4.3 梯度下降法实践1-特征缩放
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JaxEdit Online Editor</title>
+<!-- copyright (c) 2011-2017 JaxEdit project -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="online LaTeX editor with live preview" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="main.css" />
+<link href="prettify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+</head>
+<body onload="prettyPrint()">
+<div id="header">
+  <div class="center">
+    <a id="project">JaxEdit</a>
+    <a id="start" href="https://zohooo.github.io/jaxedit">START</a>
+    <div id="menu">
+      <a href="index.html">Home</a>
+      <a href="latex.html">LaTeX</a>
+      <a class="current">Parser</a>
+      <a href="download.html">Download</a>
+      <a href="help.html">Help</a>
+    </div>
+  </div>
+</div>
+<div id="main">
+  <div id="content" class="center">
+  <h2>Use TypeJax as standalone LaTeX typesetter</h2>
+  <h3>Introduction</h3>
+  <p>The JaxEdit project is separated as two parts: one is the LaTeX editor, and the other is the LaTeX typesetter named TypeJax. If you only need to display your LaTeX document in web pages, you could use TypeJax together with MathJax.</p>
+  <h3>Example</h3>
+  <p>The following is a minimal working example for TypeJax. Also there is a more complete <a href="typejax.html">example</a>.</p>
+  <pre class="prettyprint">&lt;!DOCTYPE html&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;link rel="stylesheet" type="text/css" href="/path/to/typejax/typejax.css"&gt;
+&lt;script type="text/javascript" src="/path/to/inliner/inliner.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="/path/to/typejax/typejax.js"&gt;&lt;/script&gt;
+&lt;script type="text/x-mathjax-config"&gt;
+  MathJax.Hub.Config({ skipStartupTypeset: true });
+&lt;/script&gt;
+&lt;script type="text/javascript" src="/path/to/mathjax/MathJax.js?config=TeX-AMS_HTML"&gt;&lt;/script&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;textarea id="source" style="display:none;"&gt;
+\documentclass{article}
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}If $x>0$, then $\tan x > x > \sin x$.\end{thm}
+\end{document}
+&lt;/textarea&gt;
+&lt;div id="result" style="padding:1em;border:1px solid;"&gt;&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+  var latex = document.getElementById("source").value;
+  var result = document.getElementById("result");
+  typejax.updater.init(latex, latex.length, result);
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;</pre>
+  </div>
+</div>
+<div id="footer">
+  <div class="center">
+    <a href="https://zohooo.github.io/jaxmark">JaxMark</a>
+    <a href="https://zohooo.github.io/jekyde">Jekyde</a>
+    <a href="https://zohooo.github.io/quadtext">QuadText</a>
+    <a href="https://zohooo.github.io/quadview">QuadView</a>
+  </div>
+</div>
+</body>
+</html>
