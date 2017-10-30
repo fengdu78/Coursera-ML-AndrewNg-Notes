@@ -1,5 +1,3 @@
-# Summary
+# Table of content
 
-* [封面](README.md)
-* [第一周](chapter1.md)
-
+* [First Chapter](chapter1.md)
