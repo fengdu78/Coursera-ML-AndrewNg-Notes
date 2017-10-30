@@ -1,0 +1,22 @@
+
+/* JaxEdit: online LaTeX editor with live preview
+ * Copyright (c) 2011-2017 JaxEdit project
+ * License: The MIT License
+ * Source:  https://github.com/zohooo/jaxedit
+ */
+
+p {
+  margin: 4px;
+}
+
+.passed {
+  color: green;
+}
+
+.failed {
+  color: red;
+}
+
+#testarea  {
+  display: none;
+}

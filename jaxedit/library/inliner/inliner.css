@@ -1,0 +1,26 @@
+
+/*
+Inliner: Simple Library for Modern Browsers
+Release: Version 0.10 on 2013-11-29
+License: The MIT license
+Source: https://github.com/zohooo/inliner
+*/
+
+/* fix button styling problem in ios */
+
+button, input[type=button] {
+  -webkit-appearance: button;
+}
+
+/* remove button padding in firefox */
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* disable resizing of textarea in webkit browser */
+
+textarea {
+  resize: none;
+}
