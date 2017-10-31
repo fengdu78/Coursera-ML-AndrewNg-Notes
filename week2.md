@@ -8,7 +8,7 @@
 
 参考视频: 4 - 1 - Multiple Features (8 min).mkv
 
-目前为止，我们探讨了单变量/特征的回归模型，现在我们对房价模型增加更多的特征，例如房间数楼层等，构成一个含有多个变量的模型，模型中的特征为（x1,x2,...,xn）。
+目前为止，我们探讨了单变量/特征的回归模型，现在我们对房价模型增加更多的特征，例如房间数楼层等，构成一个含有多个变量的模型，模型中的特征为$\left( {{x}_{1}},{{x}_{1}},...,{{x}_{n}} \right)$。
 
 ![](media/591785837c95bca369021efa14a8bb1c.png)
 
@@ -16,38 +16,30 @@
 
 n 代表特征的数量
 
-x(i)代表第 i 个训练实例，是特征矩阵中的第i行，是一个向量（vector）。
+${{x}^{\left( i \right)}}$代表第 i 个训练实例，是特征矩阵中的第i行，是一个向量（vector）。
 
 比方说，上图的
 
-![](media/3825ede936a4562e589be7f132dec46e.wmf)
+${{\text{x}}^{\left( \text{2} \right)}}\text{=}\left[ \begin{matrix}  \text{1416} \\   \text{3} \\\text{2}\\  \text{40} \\ \end{matrix} \right]$，
 
-，
+$\mathop{x}_{j}^{\left( i \right)}$代表特征矩阵中第 i 行的第 j 个特征，也就是第 i 个训练实例的第 j 个特征。
 
-代表特征矩阵中第 i 行的第 j 个特征，也就是第 i 个训练实例的第 j 个特征。
+如上图的$x_{2}^{\left( 2 \right)}=3,x_{3}^{\left( 2 \right)}=2$，
 
-如上图的
+支持多变量的假设 h 表示为：${{h}_{\theta }}\left( x \right)={{\theta }_{0}}+{{\theta }_{1}}{{x}_{1}}+{{\theta }_{2}}{{x}_{2}}+...+{{\theta }_{n}}{{x}_{n}}$，
 
-![](media/919944549f1fe7e34d608e3c189a788d.wmf)
-
-，
-
-![](media/d0d3b7e7b9d6cea4235257402a7b4751.wmf)
-
-支持多变量的假设 h 表示为：
-
-这个公式中有n+1个参数和n个变量，为了使得公式能够简化一些，引入x0=1，则公式转化为：
+这个公式中有n+1个参数和n个变量，为了使得公式能够简化一些，引入${{x}_{0}}=1$，则公式转化为：${{h}_{\theta }}\left( x \right)={{\theta }_{0}}{{x}_{0}}+{{\theta }_{1}}{{x}_{1}}+{{\theta }_{2}}{{x}_{2}}+...+{{\theta }_{n}}{{x}_{n}}$
 
 此时模型中的参数是一个n+1维的向量，任何一个训练实例也都是n+1维的向量，特征矩阵X的维度是
-m\*(n+1)。 因此公式可以简化为：，其中上标T代表矩阵转置。
+m*(n+1)。 因此公式可以简化为：${{h}_{\theta }}\left( x \right)={{\theta }^{T}}X$，其中上标T代表矩阵转置。
 
 ### 4.2 多变量梯度下降
 
 参考视频: 4 - 2 - Gradient Descent for Multiple Variables (5 min).mkv
 
-与单变量线性回归类似，在多变量线性回归中，我们也构建一个代价函数，则这个代价函数是所有建模误差的平方和，即：
+与单变量线性回归类似，在多变量线性回归中，我们也构建一个代价函数，则这个代价函数是所有建模误差的平方和，即：$J\left( {{\theta }_{0}},{{\theta }_{1}}...{{\theta }_{n}} \right)=\frac{1}{2m}\sum\limits_{i=1}^{m}{{{\left( {{h}_{\theta }}\left( \mathop{x}^{\left( i \right)} \right)-\mathop{y}^{\left( i \right)} \right)}^{2}}}$ ，
 
-其中：
+其中：${{h}_{\theta }}\left( x \right)={{\theta }^{T}}X={{\theta }_{0}}{{x}_{0}}+{{\theta }_{1}}{{x}_{1}}+{{\theta }_{2}}{{x}_{2}}+...+{{\theta }_{n}}{{x}_{n}}$ ，
 
 我们的目标和单变量线性回归问题中一样，是要找出使得代价函数最小的一系列参数。
 多变量线性回归的批量梯度下降算法为：
@@ -75,16 +67,16 @@ m\*(n+1)。 因此公式可以简化为：，其中上标T代表矩阵转置。
 Python 代码示例：
 
 计算代价函数
-
-其中：
+$J\left( \theta  \right)=\frac{1}{2m}\sum\limits_{i=1}^{m}{{{\left( {{h}_{\theta }}\left( {{x}^{(i)}} \right)-{{y}^{(i)}} \right)}^{2}}}$
+其中：${{h}_{\theta }}\left( x \right)={{\theta }^{T}}X={{\theta }_{0}}{{x}_{0}}+{{\theta }_{1}}{{x}_{1}}+{{\theta }_{2}}{{x}_{2}}+...+{{\theta }_{n}}{{x}_{n}}$
 
 代码：
 
-`def computeCost(X, y, theta):`
-
-`inner = np.power(((X \* theta.T) - y), 2)`
-
-`return np.sum(inner) / (2 \* len(X))`
+```
+def computeCost(X, y, theta):
+    inner = np.power(((X * theta.T) - y), 2)
+    return np.sum(inner) / (2 * len(X))
+```
 
 ### 4.3 梯度下降法实践1-特征缩放
 

@@ -419,7 +419,7 @@ ${{\theta }_{j}}:={{\theta }_{j}}-\alpha \frac{\partial }{\partial {{\theta }_{j
 
 如图：这个是4×2矩阵，即4行2列，如m为行，n为列，那么m×n即4×2
 
-![](media/33aae71793dda7e3f2ad99b03a889723.png)
+![](media/9fa04927c2bd15780f92a7fafb539179.png)
 
 矩阵的维数即行数×列数
 
@@ -449,13 +449,11 @@ Aij指第i行，第j列的元素。
 
 例：
 
-![](media/365b95d80f902634392554dfdc131adb.wmf)
-
-![](media/26925e328812d429a418965dc66bb336.wmf)
+![](media/ffddfddfdfd.png)
 
 矩阵的乘法：每个元素都要乘
 
-![](media/a964d98b196e44750405ae832aa77ca0.wmf)
+![](media/fdddddd.png)
 
 组合算法也类似。
 
@@ -481,9 +479,9 @@ m×n矩阵乘以n×o矩阵，变成m×o矩阵。
 
 如果这样说不好理解的话就举一个例子来说明一下，比如说现在有两个矩阵A和B，那么它们的乘积就可以表示为图中所示的形式。
 
-![C:\\Users\\huanghg\\AppData\\Roaming\\360se6\\Application\\User Data\\temp\\yj3112842012041116352616.jpg](media/62434ad42f7182d656fb4119d0950a87.jpg)
+![C:\\Users\\huanghg\\AppData\\Roaming\\360se6\\Application\\User Data\\temp\\yj3112842012041116352616.jpg](media/1a9f98df1560724713f6580de27a0bde.jpg)
 
-![C:\\Users\\huanghg\\AppData\\Roaming\\360se6\\Application\\User Data\\temp\\yj3112842012041116352616.jpg](media/62434ad42f7182d656fb4119d0950a87.jpg)
+![C:\\Users\\huanghg\\AppData\\Roaming\\360se6\\Application\\User Data\\temp\\yj3112842012041116352616.jpg](media/5ec35206e8ae22668d4b4a3c3ea7b292.jpg)
 
 ### 3.5 矩阵乘法的性质
 
@@ -497,7 +495,7 @@ m×n矩阵乘以n×o矩阵，变成m×o矩阵。
 
 单位矩阵：在矩阵的乘法中，有一种矩阵起着特殊的作用，如同数的乘法中的1,我们称这种矩阵为单位矩阵．它是个方阵，一般用I或者E表示，本讲义都用I代表单位矩阵，从左上角到右下角的对角线（称为主对角线）上的元素均为1以外全都为0。如：
 
-![](media/bb7c406f92550e3cc88e8823e0a89452.png)
+![](media/66571a6972f512bbce4959650c1102cf.png)
 
 对于单位矩阵，有AI=IA=A
 
@@ -507,7 +505,7 @@ m×n矩阵乘以n×o矩阵，变成m×o矩阵。
 
 矩阵的逆：如矩阵A是一个m×m矩阵（方阵），如果有逆矩阵，则：
 
-![](media/639379df064363ce01b7e7a257673120.png)
+![](media/3acff3da39e96463b991ea178940a33f.png)
 
 我们一般在OCTAVE或者MATLAB中进行计算矩阵的逆矩阵。
 
@@ -524,14 +522,16 @@ m×n矩阵乘以n×o矩阵，变成m×o矩阵。
 
 矩阵的转置基本性质:
 
-(A±B)T=AT±BT
 
-(A×B)T= BT×AT
+$ {{\left( A\pm B \right)}^{T}}={{A}^{T}}\pm {{B}^{T}} $
+${{\left( A\times B \right)}^{T}}={{B}^{T}}\times {{A}^{T}}$
+${{\left( {{A}^{T}} \right)}^{T}}=A $
+${{\left( KA \right)}^{T}}=K{{A}^{T}} $
 
-(AT)T=A
-
-(KA)T=KAT
 
 matlab中矩阵转置：
 
 直接打一撇，x=y'。
+
+
+
