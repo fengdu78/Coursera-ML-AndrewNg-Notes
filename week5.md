@@ -1,6 +1,7 @@
-﻿第5周
+第5周
 =====
 [TOC]
+
 九、神经网络的学习(Neural Networks: Learning)
 ---------------------------------------------
 
@@ -10,30 +11,29 @@
 
 首先引入一些便于稍后讨论的新标记方法：
 
-假设神经网络的训练样本有m个，每个包含一组输入x和一组输出信号y，L表示神经网络层数，${S}_{I}$表示每层的neuron个数(SL表示输出层神经元个数)，${S}_{L}$代表最后一层中处理单元的个数。
+假设神经网络的训练样本有m个，每个包含一组输入x和一组输出信号y，L表示神经网络层数，$S_I$表示每层的neuron个数(SL表示输出层神经元个数)，$S_L$代表最后一层中处理单元的个数。
 
 将神经网络的分类定义为两种情况：二类分类和多类分类，
 
-二类分类：${S}_{L}=0, y=0  or  1$表示哪一类；
+二类分类：$S_L=0, y=0\, or\, 1$表示哪一类；
 
-K类分类：${S}_{L}=K, {y}_{i} = 1$表示分到第i类；（K\>2）
+K类分类：$S_L=K, y_i = 1$表示分到第i类；$(K>2)$
 
 ![](media/8f7c28297fc9ed297f42942018441850.jpg)
 
 我们回顾逻辑回归问题中我们的代价函数为：
 
-$$  J\left(\theta \right)=-\frac{1}{m}\left[\sum_\limits{i=1}^{m}{y}^{(i)}\log{{h}_{\theta}({x}^{(i)})}+\left(1-{y}^{(i)}\right)log\left(1-{h}_{\theta}\left({x}^{(i)}\right)\right)\right]+\frac{\lambda}{2m}\sum_\limits{j=1}^{n}{{\theta}_{j}}^{2}  $$
+$$  J\left(\theta \right)=-\frac{1}{m}\left[\sum_\limits{i=1}^{m}{y}^{(i)}\log{h_\theta({x}^{(i)})}+\left(1-{y}^{(i)}\right)log\left(1-h_\theta\left({x}^{(i)}\right)\right)\right]+\frac{\lambda}{2m}\sum_\limits{j=1}^{n}{\theta_j}^{2}  $$
 
 
-在逻辑回归中，我们只有一个输出变量，又称标量（scalar），也只有一个因变量y，但是在神经网络中，我们可以有很多输出变量，我们的$h_\theta(x)$是一个维度为K的向量，并且我们训练集中的因变量也是同样维度的一个向量，因此我们的代价函数会比逻辑回归更加复杂一些，为：
-   $${h}_{\Theta}\left(x\right)\in \mathbb{R}^{K}$$              $${\left({{h}_{\Theta}}\left(x\right)\right)}_{i}={i}^{th}      output$$
+在逻辑回归中，我们只有一个输出变量，又称标量（scalar），也只有一个因变量y，但是在神经网络中，我们可以有很多输出变量，我们的$h_\theta(x)$是一个维度为K的向量，并且我们训练集中的因变量也是同样维度的一个向量，因此我们的代价函数会比逻辑回归更加复杂一些，为：$\newcommand{\subk}[1]{ #1_k }$
+$$h_\theta\left(x\right)\in \mathbb{R}^{K}$$ $${\left({h_\theta}\left(x\right)\right)}_{i}={i}^{th} \text{output}$$
 
-  $${J}_{\Theta} = -\frac{1}{m}\left[\sum_\limits{i=1}^{m}\sum_\limits{k=1}^{k}{{{y}_{k}}}^{(i)}\log\left({h}_{\Theta}({x}^{(i)}\right)_{k}+\left(1-{{y}_{k}}^{(i)}\right)\log\left( 1- {\left({h}_{\Theta}\left({x}^{(i)}\right)\right)}_{k}\right)\right]+\frac{\lambda}{2m}\sum_\limits{l=1}^{L-1}\sum_\limits{i=1}^{{s}_{l}-1}\sum_\limits{j=1}^{{s}_{l}+1}\left(\Theta^{1}_{ji}\right)^2$$   
-
+$$J(\Theta) = -\frac{1}{m} \left[ \sum\limits_{i=1}^{m} \sum\limits_{k=1}^{k} {y_k}^{(i)} \log \subk{(h_\Theta(x^{(i)}))} + \left( 1 - y_k^{(i)} \right) \log \left( 1- \subk{\left( h_\Theta \left( x^{(i)} \right) \right)} \right) \right] + \frac{\lambda}{2m} \sum\limits_{l=1}^{L-1} \sum\limits_{i=1}^{s_l} \sum\limits_{j=1}^{s_l+1} \left( \Theta_{ji}^{(l)} \right)^2$$
 
 这个看起来复杂很多的代价函数背后的思想还是一样的，我们希望通过代价函数来观察算法预测的结果与真实情况的误差有多大，唯一不同的是，对于每一行特征，我们都会给出K个预测，基本上我们可以利用循环，对每一行特征都预测K个不同结果，然后在利用循环在K个预测中选择可能性最高的一个，将其与y中的实际数据进行比较。
 
-正则化的那一项只是排除了每一层${{\theta }_{0}}$后，每一层的${{\theta }}$ 矩阵的和。最里层的循环j循环所有的行（由$s_{l}$ +1 层的激活单元数决定），循环i则循环所有的列，由该层（${s}_{l}$层）的激活单元数所决定。即：$h_\theta(x)$与真实值之间的距离为每个样本-每个类输出的加和，对参数进行regularization的bias项处理所有参数的平方和。
+正则化的那一项只是排除了每一层$\theta_0$后，每一层的$\theta$ 矩阵的和。最里层的循环j循环所有的行（由$s_l$ +1 层的激活单元数决定），循环i则循环所有的列，由该层（$s_l$层）的激活单元数所决定。即：$h_\theta(x)$与真实值之间的距离为每个样本-每个类输出的加和，对参数进行regularization的bias项处理所有参数的平方和。
 
 ### 9.2 反向传播算法
 
@@ -52,13 +52,13 @@ $$  J\left(\theta \right)=-\frac{1}{m}\left[\sum_\limits{i=1}^{m}{y}^{(i)}\log{{
 
 ![](media/6a0954ad41f959d7f272e8f53d4ee2de.jpg)
 
-我们从最后一层的误差开始计算，误差是激活单元的预测（$a^{(4)}_k$）与实际值（$y^k$）之间的误差，（k=1:K）。
+我们从最后一层的误差开始计算，误差是激活单元的预测（$\subk{a^{(4)}}$）与实际值（$y^k$）之间的误差，（k=1:K）。
 我们用δ来表示误差，则：$\delta^{(4)}=a^{(4)}-y$
 我们利用这个误差值来计算前一层的误差：$\delta^{(3)}=\left({\Theta^{(3)}}\right)^{T}\delta^{(4)}\ast g'\left(z^{(3)}\right)$
 其中 $g'\left(z^{(3)}\right)$是 $S$ 形函数的导数，$g'\left(z^{(3)}\right)=a^{(3)}\ast\left(1-a^{(3)}\right)$。而$(θ^{(3)})^{T}\delta^{(4)}$则是权重导致的误差的和。下一步是继续计算第二层的误差：
 $$ \delta^{(2)}=\left(\Theta^{(2)}\right)^{T}\delta^{(3)}\ast g'\left(z^{(2)}\right)$$
 因为第一层是输入变量，不存在误差。我们有了所有的误差的表达式后，便可以计算代价函数的偏导数了，假设λ=0，即我们不做任何正则化处理时有：
-$$\frac{\partial}{\partial\Theta^{(l)}_{ij}}J\left(\Theta\right)={a}^{(l)}_{ij}\delta^{l+1}_{i}$$
+$$\frac{\partial}{\partial\Theta_{ij}^{(l)}}J\left(\Theta\right)=a_{ij}^{(l)} \delta_{i}^{l+1}$$
 
 重要的是清楚地知道上面式子中上下标的含义：
 
@@ -76,10 +76,13 @@ $i$ 代表下一层中误差单元的下标，是受到权重矩阵中第i行影
 
 即首先用正向传播方法计算出每一层的激活单元，利用训练集的结果与神经网络预测的结果求出最后一层的误差，然后利用该误差运用反向传播法计算出直至第二层的所有误差。
 
-在求出了$\Delta^{(l)}_{ij}$之后，我们便可以计算代价函数的偏导数了，计算方法如下：
-$$ D^{(l)}_{ij} := \frac{1}{m}\Delta^{(l)}_{ij}+\lambda\Theta^{(l)}_{ij} $$  $if$  $ j \neq 0 $
-
-$$ D^{(l)}_{ij} := \frac{1}{m}\Delta^{(l)}_{ij}$$                 $$if$$  $$j = 0$$
+在求出了$\Delta_{ij}^{(l)}$之后，我们便可以计算代价函数的偏导数了，计算方法如下：
+$$ D_{ij}^{(l)} := 
+\begin{cases}
+    \frac{1}{m}\Delta_{ij}^{(l)}+\lambda\Theta_{ij}^{(l)}, & \text{if}\; j\neq 0 \\\
+    \frac{1}{m}\Delta_{ij}^{(l)},                          & \text{if}\; j = 0 
+\end{cases}
+$$
 
 在Octave 中，如果我们要使用 fminuc这样的优化算法来求解求出权重矩阵，我们需要将矩阵首先展开成为向量，在利用算法求出最优解后再重新转换回矩阵。
 
@@ -144,8 +147,8 @@ Octave 中代码如下：
 
 `gradApprox = (J(theta + eps) – J(theta - eps)) / (2\*eps)`
 
-当$\theta $是一个向量时，我们则需要对偏导数进行检验。因为代价函数的偏导数检验只针对一个参数的改变进行检验，下面是一个只针对${{\theta }_{1}}$进行检验的示例：
-$$\frac{\partial}{\partial\theta_{1}}=\frac{J\left(\theta_{1}+\varepsilon_{1},\theta_{2},\theta_{3}...\theta_{n} \right)-J\left(\theta_{1}-\varepsilon_{1},\theta_{2},\theta_{3}...\theta_{n}\right)}{2\varepsilon}$$
+当$\theta$是一个向量时，我们则需要对偏导数进行检验。因为代价函数的偏导数检验只针对一个参数的改变进行检验，下面是一个只针对$\theta_1$进行检验的示例：
+$$ \frac{\partial}{\partial\theta_1}=\frac{J\left(\theta_1+\varepsilon_1,\theta_2,\theta_3...\theta_n \right)-J \left( \theta_1-\varepsilon_1,\theta_2,\theta_3...\theta_n \right)}{2\varepsilon} $$
 
 最后我们还需要对通过反向传播方法计算出的偏导数进行检验。
 
