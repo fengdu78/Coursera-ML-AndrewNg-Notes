@@ -55,12 +55,11 @@ x3等等。也许有很多特征，也许你可以花一点时间从这些特征
 ​	测试集评估在通过训练集让我们的模型学习得出其参数后，对测试集运用该模型，我们有两种方式计算误差：
 
 1. 对于线性回归模型，我们利用测试集数据计算代价函数J
-
 2. 对于逻辑回归模型，我们除了可以利用测试数据集来计算代价函数外：
 
-![](media/27c368daeed61b7bba15ccdbbb227be9.png)
+​                                   $$ J_{test}{(\theta)} = -\frac{1}{{m}_{test}}\sum_\limits{i=1}^{m_{test}}\log{h_{\theta}\left(x^{(i)}_{test}\right)}+\left(1-{y^{(i)}_{test}}\right)\log{h_{\theta}\left(x^{(i)}_{test}\right)}$$
 
->   误分类的比率，对于每一个测试集实例，计算：
+> 误分类的比率，对于每一个测试集实例，计算：
 
 ![](media/751e868bebf4c0bf139db173d25e8ec4.png)
 
@@ -91,7 +90,19 @@ x3等等。也许有很多特征，也许你可以花一点时间从这些特征
 
 4.  用步骤3中选出的模型对测试集计算得出推广误差（代价函数的值）
 
-![](media/9aa321e095958ece7b9b920a1b9e0be6.png)
+    ***Train/validation/test error***
+
+    *Training error:*
+
+    ​				$$J_{train}\left(\theta\right) = \frac{1}{2m}\sum_\limits{i=1}^{m}\left(h_{\theta}\left(x^{(i)}\right)-y^{(i)}\right)^2$$
+
+    *Cross Validation error:*
+
+    ​				$$J_{cv}\left(\theta\right) = \frac{1}{2m_{cv}}\sum_\limits{i=1}^{m}\left(h_{\theta}\left(x^{(i)}_{cv}\right)-y^{(i)}_{cv}\right)^2$$
+
+    *Test error:*
+
+    ​				$$J_{test}\left(\theta\right)=\frac{1}{2m_{test}}\sum_\limits{i=1}^{m_{test}}\left(h_{\theta}\left(x^{(i)}_{cv}\right)-y^{(i)}_{cv}\right)^2$$
 
 ### 10.4 诊断偏差和方差
 
