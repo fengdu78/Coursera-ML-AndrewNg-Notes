@@ -19,7 +19,7 @@
 
 我们从二元的分类问题开始讨论。
 
-我们将因变量(dependent variable)可能属于的两个类分别称为负向类（negative class）和正向类（positive class），则因变量$y\in \\{ 0,1 \\}$ ，其中 0 表示负向类，1 表示正向类。
+我们将因变量(dependent variable)可能属于的两个类分别称为负向类（negative class）和正向类（positive class），则因变量$y\in { 0,1 \\}$ ，其中 0 表示负向类，1 表示正向类。
 
 ![](media/f86eacc2a74159c068e82ea267a752f7.png)
 
@@ -104,8 +104,8 @@ z>0 时 g(z)>0.5
 z<0 时 g(z)<0.5
 
 又 $z={\theta^{T}}x$ ，即：
-${\theta^{T}}x$大于等于 0 时，预测 y=1
-${\theta^{T}}x$小于 0 时，预测 y=0
+${\theta^{T}}x$ 大于等于 0 时，预测 y=1
+${\theta^{T}}x$ 小于 0 时，预测 y=0
 
 现在假设我们有一个模型：
 
@@ -138,8 +138,8 @@ ${\theta^{T}}x$小于 0 时，预测 y=0
 
 这意味着我们的代价函数有许多局部最小值，这将影响梯度下降算法寻找全局最小值。
 
-线性回归的代价函数为：$J\left( \theta  \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{\frac{1}{2}{{\left( {h_\theta}\left( \mathop{x}^{\left( i \right)} \right)-\mathop{y}^{\left( i \right)} \right)}^{2}}}$ 。
-我们重新定义逻辑回归的代价函数为：$J\left( \theta  \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{\operatorname{Cost}\left( {h_\theta}\left( \mathop{x}^{\left( i \right)} \right),\mathop{y}^{\left( i \right)} \right)}$，其中
+线性回归的代价函数为：$J\left( \theta  \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{\frac{1}{2}{{\left( {h_\theta}\left({x}^{\left( i \right)} \right)-{y}^{\left( i \right)} \right)}^{2}}}$ 。
+我们重新定义逻辑回归的代价函数为：$J\left( \theta  \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{{Cost}\left( {h_\theta}\left( {x}^{\left( i \right)} \right),{y}^{\left( i \right)} \right)}$，其中
 
 ![](media/54249cb51f0086fa6a805291bf2639f1.png)
 
@@ -248,7 +248,7 @@ $Cost\left( {h_\theta}\left( x \right),y \right)=-y\times log\left( {h_\theta}\l
 $Cost\left( {h_\theta}\left( x \right),y \right)=-y\times log\left( {h_\theta}\left( x \right) \right)-(1-y)\times log\left( 1-{h_\theta}\left( x \right) \right)$
 $=-\frac{1}{m}\sum\limits_{i=1}^{m}{[{{y}^{(i)}}\log \left( {h_\theta}\left( {{x}^{(i)}} \right) \right)+\left( 1-{{y}^{(i)}} \right)\log \left( 1-{h_\theta}\left( {{x}^{(i)}} \right) \right)]}$
 根据这个代价函数，为了拟合出参数，该怎么做呢？我们要试图找尽量让$J\left( \theta  \right)$ 取得最小值的参数$\theta $。
-$\underset\theta{\mathop{\min }}\,j\left( \theta  \right)$ 
+$\underset{\theta}{\min }J\left( \theta  \right)$ 
 所以我们想要尽量减小这一项，这将我们将得到某个参数$\theta $。
 如果我们给出一个新的样本，假如某个特征 x，我们可以用拟合训练样本的参数$\theta $，来输出对假设的预测。
 另外，我们假设的输出，实际上就是这个概率值：$p(y=1|x;\theta)$，就是关于 x 以$\theta $为参数，y=1 的概率，你可以认为我们的假设就是估计 y=1 的概率，所以，接下来就是弄清楚如何最大限度地最小化代价函数$J\left( \theta  \right)$，作为一个关于$\theta $的函数，这样我们才能为训练集拟合出参数$\theta $。
@@ -479,7 +479,7 @@ ${h_\theta}\left( x \right)={\theta_{0}}+{\theta_{1}}{x_{1}}+{\theta_{2}}{x_{2}}
 ![](media/ea76cc5394cf298f2414f230bcded0bd.jpg)
 
 如果选择的正则化参数λ过大，则会把所有的参数都最小化了，导致模型变成 ${h_\theta}\left( x \right)={\theta_{0}}$，也就是上图中红色直线所示的情况，造成欠拟合。
-那为什么增加的一项$\lambda =\sum\limits_{j=1}^{n}{\mathop\theta_j^{2}}$ 可以使$\theta $的值减小呢？
+那为什么增加的一项$\lambda =\sum\limits_{j=1}^{n}{\theta_j^{2}}$ 可以使$\theta $的值减小呢？
 因为如果我们令λ的值很大的话，为了使Cost Function 尽可能的小，所有的$\theta $的值（不包括${\theta_{0}}$）都会在一定程度上减小。
 但若λ的值太大了，那么$\theta $（不包括${\theta_{0}}$）都会趋近于0，这样我们所得到的只能是一条平行于x轴的直线。
 所以对于正则化，我们要取一个合理的λ的值，这样才能更好的应用正则化。

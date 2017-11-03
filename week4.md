@@ -106,7 +106,7 @@ $a_{i}^{\left( j \right)}$ 代表第 j 层的第 i 个激活单元。${{\theta }
 
 上面进行的讨论中只是将特征矩阵中的一行（一个训练实例）喂给了神经网络，我们需要将整个训练集都喂给我们的神经网络算法来学习模型。
 
-我们可以知道：每一个a都是由上一层所有的x和每一个x所对应的$\theta$决定的。
+我们可以知道：每一个a都是由上一层所有的x和每一个x所对应的决定的。
 
 （我们把这样从左到右的算法称为前向传播算法( FORWARD PROPAGATION )）
 
@@ -123,7 +123,7 @@ $a_{i}^{\left( j \right)}$ 代表第 j 层的第 i 个激活单元。${{\theta }
 参考视频: 8 - 4 - Model Representation II (12 min).mkv
 
 ( FORWARD PROPAGATION )
-相对于使用循环来编码，利用向量化的方法会使得计算更为简便。以上面的神经网络为例，试着计算第二层的值：
+相对与使用循环来编码，利用向量化的方法会使得计算更为简便。以上面的神经网络为例，试着计算第二层的值：
 
 ![](media/303ce7ad54d957fca9dbb6a992155111.png)
 
@@ -135,7 +135,9 @@ $a_{i}^{\left( j \right)}$ 代表第 j 层的第 i 个激活单元。${{\theta }
 
 我们令 ${{z}^{\left( 3 \right)}}={{\theta }^{\left( 2 \right)}}{{a}^{\left( 2 \right)}}$，则 $h_\theta(x)={{a}^{\left( 3 \right)}}=g({{z}^{\left( 3 \right)}})$。
 这只是针对训练集中一个训练实例所进行的计算。如果我们要对整个训练集进行计算，我们需要将训练集特征矩阵进行转置，使得同一个实例的特征都在同一列里。即：
-${{z}^{\left( 2 \right)}}={{\theta }^{\left( 1 \right)}}\times {{X}^{T}} \qquad {{a}^{\left( 2 \right)}}=g({{z}^{\left( 2 \right)}})$
+${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
+
+ ${{a}^{\left( 2 \right)}}=g({{z}^{\left( 2 \right)}})$
 
 
 为了更好了了解Neuron Networks的工作原理，我们先把左半部分遮住：
@@ -147,7 +149,7 @@ ${{z}^{\left( 2 \right)}}={{\theta }^{\left( 1 \right)}}\times {{X}^{T}} \qquad 
 ![](media/10342b472803c339a9e3bc339188c5b8.png)
 
 其实神经网络就像是logistic regression，只不过我们把logistic regression中的输入向量$\left[ x_1\sim {x_3} \right]$ 变成了中间层的$\left[ a_1^{(2)}\sim a_3^{(2)} \right]$, 即:  $h_\theta(x)=g\left( \theta_0^{\left( 2 \right)}a_0^{\left( 2 \right)}+\theta_1^{\left( 2 \right)}a_1^{\left( 2 \right)}+\theta_{2}^{\left( 2 \right)}a_{2}^{\left( 2 \right)}+\theta_{3}^{\left( 2 \right)}a_{3}^{\left( 2 \right)} \right)$ 
-我们可以把$a_0, a_1, a_2, a_3$看成更为高级的特征值，也就是$x_0, x_1, x_2, x_3$的进化体，并且它们是由x与$\theta $ 决定的，因为是梯度下降的，所以$a$是变化的，并且变得越来越厉害，所以这些更高级的特征值远比仅仅将x次方厉害，也能更好的预测新数据。
+我们可以把$a_0, a_1, a_2, a_3$看成更为高级的特征值，也就是$x_0, x_1, x_2, x_3$的进化体，并且它们是由x与决定的，因为是梯度下降的，所以$a$是变化的，并且变得越来越厉害，所以这些更高级的特征值远比仅仅将x次方厉害，也能更好的预测新数据。
 这就是神经网络相比于逻辑回归和线性回归的优势。
 
 
@@ -166,17 +168,19 @@ ${{z}^{\left( 2 \right)}}={{\theta }^{\left( 1 \right)}}\times {{X}^{T}} \qquad 
 ![](media/809187c1815e1ec67184699076de51f2.png)
 
 其中$\theta_0 = -30, \theta_1 = 20, \theta_2 = 20$
-我们的输出函数$h_\theta(x)$即为：$h_\theta(x)=g\left( -30+20x_1+20x_2 \right)$
+我们的输出函数$h_\theta(x)$即为：$h_\Theta(x)=g\left( -30+20x_1+20x_2 \right)$
 
 我们知道g(x)的图像是：
 
 ![](media/6d652f125654d077480aadc578ae0164.png)
 
-所以我们有：
+
 
 ![](media/f75115da9090701516aa1ff0295436dd.png)
 
-所以我们的：$h_\theta(x) \approx \text{x}_1 \text{AND} \, \text{x}_2$
+所以我们有：$h_\Theta(x) \approx \text{x}_1 \text{AND} \, \text{x}_2$
+
+所以我们的：
 
 这就是AND函数。
 
@@ -216,7 +220,7 @@ $\text{XNOR}=( \text{x}_1\, \text{AND}\, \text{x}_2 )\, \text{OR} \left( \left( 
 
 ![](media/432c906875baca78031bd337fe0c8682.jpg)
 
-我们就得到了一个能实现 XNOR 运算符功能的神经网络。
+我们就得到了一个能实现 $\text{XNOR}$ 运算符功能的神经网络。
 
 按这种方法我们可以逐渐构造出越来越复杂的函数，也能得到更加厉害的特征值。
 
