@@ -1,0 +1,34 @@
+Folks,
+ 
+my first time posting - have a bit of Unix experience, but am new to Linux.
+
+ 
+Just got a new PC at home - Dell box with Windows XP. Added a second hard disk
+for Linux. Partitioned the disk and have installed Suse 7.2 from CD, which went
+fine except it didn't pick up my monitor.
+ 
+I have a Dell branded E151FPp 15" LCD flat panel monitor and a nVidia GeForce4
+Ti4200 video card, both of which are probably too new to feature in Suse's default
+set. I downloaded a driver from the nVidia website and installed it using RPM.
+Then I ran Sax2 (as was recommended in some postings I found on the net), but
+it still doesn't feature my video card in the available list. What next?
+ 
+Another problem. I have a Dell branded keyboard and if I hit Caps-Lock twice,
+the whole machine crashes (in Linux, not Windows) - even the on/off switch is
+inactive, leaving me to reach for the power cable instead.
+ 
+If anyone can help me in any way with these probs., I'd be really grateful -
+I've searched the 'net but have run out of ideas.
+ 
+Or should I be going for a different version of Linux such as RedHat? Opinions
+welcome.
+ 
+Thanks a lot,
+Peter
+
+-- 
+Irish Linux Users' Group: ilug@linux.ie
+http://www.linux.ie/mailman/listinfo/ilug for (un)subscription information.
+List maintainer: listmaster@linux.ie
+
+
