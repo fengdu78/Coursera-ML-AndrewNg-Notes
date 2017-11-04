@@ -22,13 +22,23 @@ markdown的笔记和课程中英文字幕我将放在github和码云，希望大
 
 2017-11-3 夜
 
+-----------------------
 
+文件夹说明：
+
+docx：笔记的word版本
+
+media：笔记的图片
+
+srt：课程的中英文字幕（mp4文件需要在百度云下载）
+
+code：课程的python代码（有一部分是国外大牛写的）
 
 机器学习视频下载链接：http://pan.baidu.com/s/1dFCQvxZ 密码：dce8
 
 包含mp4视频和字幕
 
-[笔记在线阅读](index.html)
+[笔记在线阅读](http://fengdu78.gitee.io/coursera-ml-andrewng-notes)
 
 [笔记pdf版本下载](机器学习个人笔记完整版v5.pdf)
 
