@@ -151,7 +151,7 @@ ${h_\theta}\left( x \right)$与 $Cost\left( {h_\theta}\left( x \right),y \right)
 将构建的 $Cost\left( {h_\theta}\left( x \right),y \right)$简化如下： 
 $Cost\left( {h_\theta}\left( x \right),y \right)=-y\times log\left( {h_\theta}\left( x \right) \right)-(1-y)\times log\left( 1-{h_\theta}\left( x \right) \right)$
 带入代价函数得到：
-$J\left( \theta  \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{[-{{y}^{(i)}}\log \left( {h_\theta}\left( {{x}^{(i)}} \right) \right)-\left( 1-{{y}^{(i)}} \right)\log \left( 1-{h_\theta}\left( {{x}^{(i)}} \right) \right)]}$.
+$J\left( \theta  \right)=\frac{1}{m}\sum\limits_{i=1}^{m}{[-{{y}^{(i)}}\log \left( {h_\theta}\left( {{x}^{(i)}} \right) \right)-\left( 1-{{y}^{(i)}} \right)\log \left( 1-{h_\theta}\left( {{x}^{(i)}} \right) \right)]}$
 即：$J\left( \theta  \right)=-\frac{1}{m}\sum\limits_{i=1}^{m}{[{{y}^{(i)}}\log \left( {h_\theta}\left( {{x}^{(i)}} \right) \right)+\left( 1-{{y}^{(i)}} \right)\log \left( 1-{h_\theta}\left( {{x}^{(i)}} \right) \right)]}$
 
 Python代码实现：
@@ -164,8 +164,8 @@ def cost(theta, X, y):
   theta = np.matrix(theta)
   X = np.matrix(X)
   y = np.matrix(y)
-  first = np.multiply(-y, np.log(sigmoid(X \* theta.T)))
-  second = np.multiply((1 - y), np.log(1 - sigmoid(X \* theta.T)))
+  first = np.multiply(-y, np.log(sigmoid(X* theta.T)))
+  second = np.multiply((1 - y), np.log(1 - sigmoid(X* theta.T)))
   return np.sum(first - second) / (len(X))
 ```
 
@@ -249,7 +249,7 @@ $=-\frac{1}{m}\sum\limits_{i=1}^{m}{[{{y}^{(i)}}\log \left( {h_\theta}\left( {{x
 $\underset{\theta}{\min }J\left( \theta  \right)$ 
 所以我们想要尽量减小这一项，这将我们将得到某个参数$\theta $。
 如果我们给出一个新的样本，假如某个特征 x，我们可以用拟合训练样本的参数$\theta $，来输出对假设的预测。
-另外，我们假设的输出，实际上就是这个概率值：$p(y=1|x;\theta)$，就是关于 x 以$\theta $为参数，y=1 的概率，你可以认为我们的假设就是估计 y=1 的概率，所以，接下来就是弄清楚如何最大限度地最小化代价函数$J\left( \theta  \right)$，作为一个关于$\theta $的函数，这样我们才能为训练集拟合出参数$\theta $。
+另外，我们假设的输出，实际上就是这个概率值：$p(y=1|x;\theta)$，就是关于 $x$以$\theta $为参数，$y=1$ 的概率，你可以认为我们的假设就是估计 $y=1$ 的概率，所以，接下来就是弄清楚如何最大限度地最小化代价函数$J\left( \theta  \right)$，作为一个关于$\theta $的函数，这样我们才能为训练集拟合出参数$\theta $。
 
 
 最小化代价函数的方法，是使用梯度下降法(gradient descent)。这是我们的代价函数：
@@ -388,7 +388,7 @@ initialTheta=zeros(2,1);
 
 第一个例子：假如说你现在需要一个学习算法能自动地将邮件归类到不同的文件夹里，或者说可以自动地加上标签，那么，你也许需要一些不同的文件夹，或者不同的标签来完成这件事，来区分开来自工作的邮件、来自朋友的邮件、来自家人的邮件或者是有关兴趣爱好的邮件，那么，我们就有了这样一个分类问题：其类别有四个，分别用$y=1$、$y=2$、$y=3$、$y=4$来代表。
 
-第二个例子是有关药物诊断的，如果一个病人因为鼻塞来到你的诊所，他可能并没有生病，用y=1 这个类别来代表；或者患了感冒，用 y=2 来代表；或者得了流感用y=3来代表。
+第二个例子是有关药物诊断的，如果一个病人因为鼻塞来到你的诊所，他可能并没有生病，用 $y=1$ 这个类别来代表；或者患了感冒，用 $y=2$ 来代表；或者得了流感用$y=3$来代表。
 
 第三个例子：如果你正在做有关天气的机器学习分类问题，那么你可能想要区分哪些天是晴天、多云、雨天、或者下雪天，对上述所有的例子，$y$ 可以取一个很小的数值，一个相对"谨慎"的数值，比如1 到3、1到4或者其它数值，以上说的都是多类分类问题，顺便一提的是，对于下标是0 1 2 3，还是 1 2 3 4 都不重要，我更喜欢将分类从 1 开始标而不是0，其实怎样标注都不会影响最后的结果。
 

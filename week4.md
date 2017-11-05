@@ -110,7 +110,7 @@ $a_{i}^{\left( j \right)}$ 代表第 j 层的第 i 个激活单元。${{\theta }
 
 （我们把这样从左到右的算法称为前向传播算法( FORWARD PROPAGATION )）
 
-把$x$, $\theta$, $a$分别用矩阵表示：
+把$x$, $\theta$, $a$ 分别用矩阵表示：
 
 ![](media/20171101224053.png)
 
@@ -149,7 +149,7 @@ ${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
 ![](media/10342b472803c339a9e3bc339188c5b8.png)
 
 其实神经网络就像是logistic regression，只不过我们把logistic regression中的输入向量$\left[ x_1\sim {x_3} \right]$ 变成了中间层的$\left[ a_1^{(2)}\sim a_3^{(2)} \right]$, 即:  $h_\theta(x)=g\left( \theta_0^{\left( 2 \right)}a_0^{\left( 2 \right)}+\theta_1^{\left( 2 \right)}a_1^{\left( 2 \right)}+\theta_{2}^{\left( 2 \right)}a_{2}^{\left( 2 \right)}+\theta_{3}^{\left( 2 \right)}a_{3}^{\left( 2 \right)} \right)$ 
-我们可以把$a_0, a_1, a_2, a_3$看成更为高级的特征值，也就是$x_0, x_1, x_2, x_3$的进化体，并且它们是由x与决定的，因为是梯度下降的，所以$a$是变化的，并且变得越来越厉害，所以这些更高级的特征值远比仅仅将x次方厉害，也能更好的预测新数据。
+我们可以把$a_0, a_1, a_2, a_3$看成更为高级的特征值，也就是$x_0, x_1, x_2, x_3$的进化体，并且它们是由 $x$与决定的，因为是梯度下降的，所以$a$是变化的，并且变得越来越厉害，所以这些更高级的特征值远比仅仅将 $x$次方厉害，也能更好的预测新数据。
 这就是神经网络相比于逻辑回归和线性回归的优势。
 
 
@@ -170,7 +170,7 @@ ${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
 其中$\theta_0 = -30, \theta_1 = 20, \theta_2 = 20$
 我们的输出函数$h_\theta(x)$即为：$h_\Theta(x)=g\left( -30+20x_1+20x_2 \right)$
 
-我们知道g(x)的图像是：
+我们知道$g(x)$的图像是：
 
 ![](media/6d652f125654d077480aadc578ae0164.png)
 
