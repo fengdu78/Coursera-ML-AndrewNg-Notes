@@ -55,13 +55,13 @@ ${x}_{j}^{\left( i \right)}$代表特征矩阵中第 $i$ 行的第 $j$ 个特征
 
 ![](media/dd33179ceccbd8b0b59a5ae698847049.png)
 
-当n\>=1时，
+当$n>=1$时，
+${{\theta }_{0}}:={{\theta }_{0}}-a\frac{1}{m}\sum\limits_{i=1}^{m}{({{h}_{\theta }}({{x}^{(i)}})-{{y}^{(i)}})}x_{0}^{(i)}$
 
-![](media/91c1bfd804ae9839ed9187701de3e9bb.png)
+${{\theta }_{1}}:={{\theta }_{1}}-a\frac{1}{m}\sum\limits_{i=1}^{m}{({{h}_{\theta }}({{x}^{(i)}})-{{y}^{(i)}})}x_{1}^{(i)}$
 
-![](media/d5f5b77b9bfbd3f5fa12404572de46b2.png)
+${{\theta }_{2}}:={{\theta }_{2}}-a\frac{1}{m}\sum\limits_{i=1}^{m}{({{h}_{\theta }}({{x}^{(i)}})-{{y}^{(i)}})}x_{2}^{(i)}$
 
-![](media/3971287dd895297579277ed617ad85f5.png)
 
 我们开始随机选择一系列的参数值，计算所有的预测结果后，再给所有的参数一个新的值，如此循环直到收敛。
 
