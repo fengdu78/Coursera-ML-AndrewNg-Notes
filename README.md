@@ -22,6 +22,8 @@ markdown的笔记和课程中英文字幕我将放在github和码云，希望大
 
 2017-11-3 夜
 
+[我的知乎](https://www.zhihu.com/people/fengdu78/activities)
+
 -----------------------
 
 文件夹说明：
@@ -29,6 +31,8 @@ markdown的笔记和课程中英文字幕我将放在github和码云，希望大
 docx：笔记的word版本
 
 media：笔记的图片
+
+ppt：课程的原版课件
 
 srt：课程的中英文字幕（mp4文件需要在百度云下载）
 
