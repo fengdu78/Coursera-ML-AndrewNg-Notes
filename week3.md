@@ -330,28 +330,27 @@ Octave 有一个非常理想的库用于实现这些先进的优化算法，所�
 
 比方说，你有一个含两个参数的问题，这两个参数是${\theta_{0}}$和${\theta_{1}}$，因此，通过这个代价函数，你可以得到${\theta_{1}}$和 ${\theta_{2}}$的值，如果你将$J\left( \theta  \right)$ 最小化的话，那么它的最小值将是${\theta_{1}}$等于5 ，${\theta_{2}}$等于5。代价函数$J\left( \theta  \right)$的导数推出来就是这两个表达式：
 
-![](media/bc8430f507924b63781ab9c9f90cd235.png)
+$\frac{\partial }{\partial {{\theta }_{1}}}J(\theta)=2({{\theta }_{1}}-5)$
 
-。
+$\frac{\partial }{\partial {{\theta }_{2}}}J(\theta)=2({{\theta }_{2}}-5)$
 
 如果我们不知道最小值，但你想要代价函数找到这个最小值，是用比如梯度下降这些算法，但最好是用比它更高级的算法，你要做的就是运行一个像这样的Octave 函数：
 
 ```octave
 function [jVal, gradient]=costFunction(theta)
     
-　　jVal=(theta(1)-5)\^2+(theta(2)-5)\^2;
+　　jVal=(theta(1)-5)^2+(theta(2)-5)^2;
     
 　　gradient=zeros(2,1);
     
-　　gradient(1)=2\*(theta(1)-5);
+　　gradient(1)=2*(theta(1)-5);
     
-　　gradient(2)=2\*(theta(2)-5);
+　　gradient(2)=2*(theta(2)-5);
     
 end
 ```
 
-这样就计算出这个代价函数，函数返回的第二个值是梯度值，梯度值应该是一个2×1的向量，梯度向量的两个元素对应这里的两个偏导数项，运行这个
-costFunction 函数后，你就可以调用高级的优化函数，这个函数叫
+这样就计算出这个代价函数，函数返回的第二个值是梯度值，梯度值应该是一个2×1的向量，梯度向量的两个元素对应这里的两个偏导数项，运行这个costFunction 函数后，你就可以调用高级的优化函数，这个函数叫
 fminunc，它表示Octave 里无约束最小化函数。调用它的方式如下：
 
 ```octave
@@ -362,7 +361,7 @@ initialTheta=zeros(2,1);
 [optTheta, functionVal, exitFlag]=fminunc(@costFunction, initialTheta, options);
 ```
 
-你要设置几个options，这个 options 变量作为一个数据结构可以存储你想要的options，所以 GradObj 和On，这里设置梯度目标参数为打开(on)，这意味着你现在确实要给这个算法提供一个梯度，然后设置最大迭代次数，比方说100，我们给出一个$\theta$的猜测初始值，它是一个2×1的向量，那么这个命令就调用fminunc，这个@符号表示指向我们刚刚定义的costFunction 函数的指针。如果你调用它，它就会使用众多高级优化算法中的一个，当然你也可以把它当成梯度下降，只不过它能自动选择学习速率$\alpha$，你不需要自己来做。然后它会尝试使用这些高级的优化算法，就像加强版的梯度下降法，为你找到最佳的${\theta}$值。
+你要设置几个options，这个 options 变量作为一个数据结构可以存储你想要的options，所以 GradObj 和On，这里设置梯度目标参数为打开(on)，这意味着你现在确实要给这个算法提供一个梯度，然后设置最大迭代次数，比方说100，我们给出一个$\theta$ 的猜测初始值，它是一个2×1的向量，那么这个命令就调用fminunc，这个@符号表示指向我们刚刚定义的costFunction 函数的指针。如果你调用它，它就会使用众多高级优化算法中的一个，当然你也可以把它当成梯度下降，只不过它能自动选择学习速率$\alpha$，你不需要自己来做。然后它会尝试使用这些高级的优化算法，就像加强版的梯度下降法，为你找到最佳的${\theta}$值。
 
 让我告诉你它在 Octave 里什么样：
 
@@ -386,7 +385,7 @@ initialTheta=zeros(2,1);
 
 先看这样一些例子。
 
-第一个例子：假如说你现在需要一个学习算法能自动地将邮件归类到不同的文件夹里，或者说可以自动地加上标签，那么，你也许需要一些不同的文件夹，或者不同的标签来完成这件事，来区分开来自工作的邮件、来自朋友的邮件、来自家人的邮件或者是有关兴趣爱好的邮件，那么，我们就有了这样一个分类问题：其类别有四个，分别用$y=1$、$y=2$、$y=3$、$y=4$来代表。
+第一个例子：假如说你现在需要一个学习算法能自动地将邮件归类到不同的文件夹里，或者说可以自动地加上标签，那么，你也许需要一些不同的文件夹，或者不同的标签来完成这件事，来区分开来自工作的邮件、来自朋友的邮件、来自家人的邮件或者是有关兴趣爱好的邮件，那么，我们就有了这样一个分类问题：其类别有四个，分别用$y=1$、$y=2$、$y=3$、$y=4$ 来代表。
 
 第二个例子是有关药物诊断的，如果一个病人因为鼻塞来到你的诊所，他可能并没有生病，用 $y=1$ 这个类别来代表；或者患了感冒，用 $y=2$ 来代表；或者得了流感用$y=3$来代表。
 
@@ -504,7 +503,7 @@ ${\theta_j}:={\theta_j}(1-a\frac{\lambda }{m})-a\frac{1}{m}\sum\limits_{i=1}^{m}
 
 ![](media/71d723ddb5863c943fcd4e6951114ee3.png)
 
-图中的矩阵尺寸为 (n+1)\*(n+1)。
+图中的矩阵尺寸为 $(n+1)*(n+1)$。
 
 ### 7.4 正则化的逻辑回归模型
 
@@ -529,7 +528,7 @@ def costReg(theta, X, y, learningRate):
     y = np.matrix(y)
     first = np.multiply(-y, np.log(sigmoid(X*theta.T)))
     second = np.multiply((1 - y), np.log(1 - sigmoid(X*theta.T)))
-    reg = (learningRate / 2 * len(X))* np.sum(np.power(theta[:,1:theta.shape[1]],2))
+    reg = (learningRate / (2 * len(X))* np.sum(np.power(theta[:,1:theta.shape[1]],2))
     return np.sum(first - second) / (len(X)) + reg
 ```
 
