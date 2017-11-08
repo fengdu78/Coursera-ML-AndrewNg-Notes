@@ -248,7 +248,7 @@ $\theta ={{\left( {X^{T}}X \right)}^{-1}}{X^{T}}y$ 的推导过程：
 $J\left( \theta  \right)=\frac{1}{2m}\sum\limits_{i=1}^{m}{{{\left( {h_{\theta}}\left( {x^{(i)}} \right)-{y^{(i)}} \right)}^{2}}}$
 其中：${h_{\theta}}\left( x \right)={\theta^{T}}X={\theta_{0}}{x_{0}}+{\theta_{1}}{x_{1}}+{\theta_{2}}{x_{2}}+...+{\theta_{n}}{x_{n}}$
 
-将向量表达形式转为矩阵表达形式，则有$J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{2}}$ ，其中$X$为$m$行$n$列的矩阵（$m$为样本个数，$n$为特征个数），$\theta$为$n$行1列的矩阵，$y$为$m$行$n$列的矩阵，对$J(\theta )$进行如下变换
+将向量表达形式转为矩阵表达形式，则有$J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{2}}$ ，其中$X$为$m$行$n$列的矩阵（$m$为样本个数，$n$为特征个数），$\theta$为$n$行1列的矩阵，$y$为$m$行1列的矩阵，对$J(\theta )$进行如下变换
 
 $J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{T}}\left( X\theta -y \right)$
 
@@ -262,13 +262,13 @@ $\frac{dAB}{dB}={{A}^{T}}$
 
 $\frac{d{{A}^{T}}B}{dB}=B$
 
-$\frac{d{{X}^{T}}AX}{dX}=2AX$                              (a)
+$\frac{d{{X}^{T}}AX}{dX}=2AX​$                              (a)
 
 对于（a）式：由于：${{X}^{T}}AX=A{{X}^{2}}$，所以其导数为$2AX$。
 
 所以有:
 
-$\frac{\partial J\left( \theta  \right)}{\partial \theta }=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}\theta -{{X}^{T}}\theta -0 \right)​$
+$\frac{\partial J\left( \theta  \right)}{\partial \theta }=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}\theta -{{X}^{T}}\theta -0 \right)$
 
 ​           $={{X}^{T}}X\theta -{{X}^{T}}y$
 
