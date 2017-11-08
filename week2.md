@@ -260,15 +260,13 @@ $J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{T}}\left( X\theta -y \right)
 
 $\frac{dAB}{dB}={{A}^{T}}$ 
 
-$\frac{d{{A}^{T}}B}{dB}=B$
-
-$\frac{d{{X}^{T}}AX}{dX}=2AX​$                              (a)
+$\frac{d{{X}^{T}}AX}{dX}=2AX$                              (a)
 
 对于（a）式：由于：${{X}^{T}}AX=A{{X}^{2}}$，所以其导数为$2AX$。
 
 所以有:
 
-$\frac{\partial J\left( \theta  \right)}{\partial \theta }=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}\theta -{{X}^{T}}\theta -0 \right)$
+$\frac{\partial J\left( \theta  \right)}{\partial \theta }=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}y -{{X}^{T}}y -0 \right)$
 
 ​           $={{X}^{T}}X\theta -{{X}^{T}}y$
 
