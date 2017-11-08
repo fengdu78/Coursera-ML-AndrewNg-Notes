@@ -248,7 +248,7 @@ $\theta ={{\left( {X^{T}}X \right)}^{-1}}{X^{T}}y$ 的推导过程：
 $J\left( \theta  \right)=\frac{1}{2m}\sum\limits_{i=1}^{m}{{{\left( {h_{\theta}}\left( {x^{(i)}} \right)-{y^{(i)}} \right)}^{2}}}$
 其中：${h_{\theta}}\left( x \right)={\theta^{T}}X={\theta_{0}}{x_{0}}+{\theta_{1}}{x_{1}}+{\theta_{2}}{x_{2}}+...+{\theta_{n}}{x_{n}}$
 
-将向量表达形式转为矩阵表达形式，则有$J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{2}}$ ，其中X为m行n列的矩阵（m为样本个数，n为特征个数），$\theta$为n行1列的矩阵，Y为m行n列的矩阵，对$J(\theta )$进行如下变换
+将向量表达形式转为矩阵表达形式，则有$J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{2}}$ ，其中$X$为$m$行$n$列的矩阵（$m$为样本个数，$n$为特征个数），$\theta$为$n$行1列的矩阵，$y$为$m$行$n$列的矩阵，对$J(\theta )$进行如下变换
 
 $J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{T}}\left( X\theta -y \right)$
 
@@ -256,7 +256,7 @@ $J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{T}}\left( X\theta -y \right)
 
 ​     $=\frac{1}{2}\left( {{\theta }^{T}}{{X}^{T}}X\theta -{{\theta}^{T}}{{X}^{T}}y-{{y}^{T}}X\theta -{{y}^{T}}y \right)$
 
-接下来对$J(\theta )$偏导，需要用到以下几个矩阵的求导法则
+接下来对$J(\theta )$偏导，需要用到以下几个矩阵的求导法则:
 
 $\frac{dAB}{dB}={{A}^{T}}$ 
 
@@ -264,7 +264,7 @@ $\frac{d{{A}^{T}}B}{dB}=B$
 
 $\frac{d{{X}^{T}}AX}{dX}=2AX$                              (a)
 
-对于（a）式可以假设$X$为一行一列，${{X}^{T}}AX=A{{X}^{2}}$，其导数为$2AX$，方便记忆
+对于（a）式：由于：${{X}^{T}}AX=\frac{{{X}^{T}}AX{{X}^{T}}}{{{X}^{T}}}=A{{X}^{2}}$，所以其导数为$2AX$。
 
 所以有:
 
@@ -272,7 +272,7 @@ $\frac{\partial J\left( \theta  \right)}{\partial \theta }=\frac{1}{2}\left(2{{X
 
 ​           $={{X}^{T}}X\theta -{{X}^{T}}y$
 
-令$\frac{\partial J\left( \theta  \right)}{\partial \theta }=0$,
+令$\frac{\partial J\left( \theta  \right)}{\partial \theta }=0​$,
 
 则有$\theta ={{\left( {X^{T}}X \right)}^{-1}}{X^{T}}y$
 
