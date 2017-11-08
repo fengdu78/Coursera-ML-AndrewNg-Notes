@@ -264,15 +264,15 @@ $\frac{d{{A}^{T}}B}{dB}=B$
 
 $\frac{d{{X}^{T}}AX}{dX}=2AX$                              (a)
 
-对于（a）式：由于：${{X}^{T}}AX=\frac{{{X}^{T}}AX{{X}^{T}}}{{{X}^{T}}}=A{{X}^{2}}$，所以其导数为$2AX$。
+对于（a）式：由于：${{X}^{T}}AX=A{{X}^{2}}$，所以其导数为$2AX$。
 
 所以有:
 
-$\frac{\partial J\left( \theta  \right)}{\partial \theta }=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}\theta -{{X}^{T}}\theta -0 \right)$
+$\frac{\partial J\left( \theta  \right)}{\partial \theta }=\frac{1}{2}\left(2{{X}^{T}}X\theta -{{X}^{T}}\theta -{{X}^{T}}\theta -0 \right)​$
 
 ​           $={{X}^{T}}X\theta -{{X}^{T}}y$
 
-令$\frac{\partial J\left( \theta  \right)}{\partial \theta }=0​$,
+令$\frac{\partial J\left( \theta  \right)}{\partial \theta }=0$,
 
 则有$\theta ={{\left( {X^{T}}X \right)}^{-1}}{X^{T}}y$
 
