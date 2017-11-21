@@ -260,9 +260,7 @@ $J(\theta )=\frac{1}{2}{{\left( X\theta -y\right)}^{T}}\left( X\theta -y \right)
 
 $\frac{dAB}{dB}={{A}^{T}}$ 
 
-$\frac{d{{X}^{T}}AX}{dX}=2AX$                              (a)
-
-对于（a）式：由于：${{X}^{T}}AX=A{{X}^{2}}$，所以其导数为$2AX$。
+$\frac{d{{X}^{T}}AX}{dX}=2AX$                            
 
 所以有:
 
