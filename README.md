@@ -1,6 +1,6 @@
 **斯坦福大学2014机器学习教程中文笔记**
 
-课程概述
+课程目录：[目录](index.html)
 
 课程地址：<https://www.coursera.org/course/ml>
 
@@ -42,9 +42,9 @@ code：课程的python代码（有一部分是国外大牛写的）
 
 包含mp4视频和字幕
 
-[笔记在线阅读](http://fengdu78.gitee.io/coursera-ml-andrewng-notes)
+[笔记在线阅读](http://www.ai-start.com/ml2014)
 
-[笔记pdf版本下载](机器学习个人笔记完整版v5.pdf)
+[笔记pdf版本下载](http://fengdu78.gitee.io/coursera-ml-andrewng-notes/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E5%AE%8C%E6%95%B4%E7%89%88v5.pdf)
 
 机器学习qq群：554839127
 
