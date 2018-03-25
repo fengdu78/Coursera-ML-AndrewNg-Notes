@@ -89,11 +89,11 @@
 
 ![](images/fbb4ffb48b64468c384647d45f7b86b5.png)
 
-其中$x_1$, $x_2$, $x_3$是输入单元（input units），我们将原始数据输入给它们。
+其中$x_1$, $x_2$, $x_3$是输入单元（**input units**），我们将原始数据输入给它们。
 $a_1$, $a_2$, $a_3$是中间单元，它们负责将数据进行处理，然后呈递到下一层。
 最后是输出单元，它负责计算${h_\theta}\left( x \right)$。
 
-神经网络模型是许多逻辑单元按照不同层级组织起来的网络，每一层的输出变量都是下一层的输入变量。下图为一个3层的神经网络，第一层成为输入层（Input Layer），最后一层称为输出层（Output Layer），中间一层成为隐藏层（Hidden Layers）。我们为每一层都增加一个偏差单位（bias unit）：
+神经网络模型是许多逻辑单元按照不同层级组织起来的网络，每一层的输出变量都是下一层的输入变量。下图为一个3层的神经网络，第一层成为输入层（**Input Layer**），最后一层称为输出层（**Output Layer**），中间一层成为隐藏层（**Hidden Layers**）。我们为每一层都增加一个偏差单位（**bias unit**）：
 
 ![](images/8293711e1d23414d0a03f6878f5a2d91.jpg)
 
@@ -108,7 +108,7 @@ $a_{i}^{\left( j \right)}$ 代表第 j 层的第 i 个激活单元。${{\theta }
 
 我们可以知道：每一个a都是由上一层所有的x和每一个x所对应的决定的。
 
-（我们把这样从左到右的算法称为前向传播算法( FORWARD PROPAGATION )）
+（我们把这样从左到右的算法称为前向传播算法( **FORWARD PROPAGATION** )）
 
 把$x$, $\theta$, $a$ 分别用矩阵表示：
 
@@ -122,7 +122,7 @@ $a_{i}^{\left( j \right)}$ 代表第 j 层的第 i 个激活单元。${{\theta }
 
 参考视频: 8 - 4 - Model Representation II (12 min).mkv
 
-( FORWARD PROPAGATION )
+( **FORWARD PROPAGATION** )
 相对与使用循环来编码，利用向量化的方法会使得计算更为简便。以上面的神经网络为例，试着计算第二层的值：
 
 ![](images/303ce7ad54d957fca9dbb6a992155111.png)
@@ -140,15 +140,15 @@ ${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
  ${{a}^{\left( 2 \right)}}=g({{z}^{\left( 2 \right)}})$
 
 
-为了更好了了解Neuron Networks的工作原理，我们先把左半部分遮住：
+为了更好了了解**Neuron Networks**的工作原理，我们先把左半部分遮住：
 
 ![](images/6167ad04e696c400cb9e1b7dc1e58d8a.png)
 
-右半部分其实就是以$a_0, a_1, a_2, a_3$, 按照Logistic Regression的方式输出$h_\theta(x)$：
+右半部分其实就是以$a_0, a_1, a_2, a_3$, 按照**Logistic Regression**的方式输出$h_\theta(x)$：
 
 ![](images/10342b472803c339a9e3bc339188c5b8.png)
 
-其实神经网络就像是logistic regression，只不过我们把logistic regression中的输入向量$\left[ x_1\sim {x_3} \right]$ 变成了中间层的$\left[ a_1^{(2)}\sim a_3^{(2)} \right]$, 即:  $h_\theta(x)=g\left( \theta_0^{\left( 2 \right)}a_0^{\left( 2 \right)}+\theta_1^{\left( 2 \right)}a_1^{\left( 2 \right)}+\theta_{2}^{\left( 2 \right)}a_{2}^{\left( 2 \right)}+\theta_{3}^{\left( 2 \right)}a_{3}^{\left( 2 \right)} \right)$ 
+其实神经网络就像是logistic regression，只不过我们把**logistic regression**中的输入向量$\left[ x_1\sim {x_3} \right]$ 变成了中间层的$\left[ a_1^{(2)}\sim a_3^{(2)} \right]$, 即:  $h_\theta(x)=g\left( \theta_0^{\left( 2 \right)}a_0^{\left( 2 \right)}+\theta_1^{\left( 2 \right)}a_1^{\left( 2 \right)}+\theta_{2}^{\left( 2 \right)}a_{2}^{\left( 2 \right)}+\theta_{3}^{\left( 2 \right)}a_{3}^{\left( 2 \right)} \right)$ 
 我们可以把$a_0, a_1, a_2, a_3$看成更为高级的特征值，也就是$x_0, x_1, x_2, x_3$的进化体，并且它们是由 $x$与决定的，因为是梯度下降的，所以$a$是变化的，并且变得越来越厉害，所以这些更高级的特征值远比仅仅将 $x$次方厉害，也能更好的预测新数据。
 这就是神经网络相比于逻辑回归和线性回归的优势。
 
@@ -159,11 +159,11 @@ ${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
 
 从本质上讲，神经网络能够通过学习得出其自身的一系列特征。在普通的逻辑回归中，我们被限制为使用数据中的原始特征$x_1,x_2,...,{{x}_{n}}$，我们虽然可以使用一些二项式项来组合这些特征，但是我们仍然受到这些原始特征的限制。在神经网络中，原始特征只是输入层，在我们上面三层的神经网络例子中，第三层也就是输出层做出的预测利用的是第二层的特征，而非输入层中的原始特征，我们可以认为第二层中的特征是神经网络通过学习后自己得出的一系列用于预测输出变量的新特征。
 
-神经网络中，单层神经元（无中间层）的计算可用来表示逻辑运算，比如逻辑AND、逻辑或OR。
+神经网络中，单层神经元（无中间层）的计算可用来表示逻辑运算，比如逻辑与(**AND**)、逻辑或(**OR**)。
 
-举例说明：逻辑与AND；下图中左半部分是神经网络的设计与output层表达式，右边上部分是sigmod函数，下半部分是真值表。
+举例说明：逻辑与(**AND**)；下图中左半部分是神经网络的设计与**output**层表达式，右边上部分是**sigmod**函数，下半部分是真值表。
 
-我们可以用这样的一个神经网络表示AND 函数：
+我们可以用这样的一个神经网络表示**AND** 函数：
 
 ![](images/809187c1815e1ec67184699076de51f2.png)
 
@@ -182,38 +182,38 @@ ${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
 
 所以我们的：
 
-这就是AND函数。
+这就是**AND**函数。
 
-接下来再介绍一个OR函数：
+接下来再介绍一个**OR**函数：
 
 ![](images/aa27671f7a3a16545a28f356a2fb98c0.png)
 
-OR与AND整体一样，区别只在于的取值不同。
+**OR**与**AND**整体一样，区别只在于的取值不同。
 
 ### 8.6 样本和直观理解II
 
 参考视频: 8 - 6 - Examples and Intuitions II (10 min).mkv
 
-二元逻辑运算符（BINARY LOGICAL OPERATORS）当输入特征为布尔值（0或1）时，我们可以用一个单一的激活层可以作为二元逻辑运算符，为了表示不同的运算符，我们之需要选择不同的权重即可。
+二元逻辑运算符（**BINARY LOGICAL OPERATORS**）当输入特征为布尔值（0或1）时，我们可以用一个单一的激活层可以作为二元逻辑运算符，为了表示不同的运算符，我们之需要选择不同的权重即可。
 
-下图的神经元（三个权重分别为-30，20，20）可以被视为作用同于逻辑与（AND）：
+下图的神经元（三个权重分别为-30，20，20）可以被视为作用同于逻辑与（**AND**）：
 
 ![](images/57480b04956f1dc54ecfc64d68a6b357.jpg)
 
-下图的神经元（三个权重分别为-10，20，20）可以被视为作用等同于逻辑或（OR）：
+下图的神经元（三个权重分别为-10，20，20）可以被视为作用等同于逻辑或（**OR**）：
 
 ![](images/7527e61b1612dcf84dadbcf7a26a22fb.jpg)
 
-下图的神经元（两个权重分别为 10，-20）可以被视为作用等同于逻辑非（NOT）：
+下图的神经元（两个权重分别为 10，-20）可以被视为作用等同于逻辑非（**NOT**）：
 
 ![](images/1fd3017dfa554642a5e1805d6d2b1fa6.jpg)
 
-我们可以利用神经元来组合成更为复杂的神经网络以实现更复杂的运算。例如我们要实现XNOR 功能（输入的两个值必须一样，均为1或均为0），即 $\text{XNOR}=( \text{x}_1\, \text{AND}\, \text{x}_2 )\, \text{OR} \left( \left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right) \right)$
+我们可以利用神经元来组合成更为复杂的神经网络以实现更复杂的运算。例如我们要实现**XNOR** 功能（输入的两个值必须一样，均为1或均为0），即 $\text{XNOR}=( \text{x}_1\, \text{AND}\, \text{x}_2 )\, \text{OR} \left( \left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right) \right)$
 首先构造一个能表达$\left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right)$部分的神经元：
 
 ![](images/4c44e69a12b48efdff2fe92a0a698768.jpg)
 
-然后将表示 AND 的神经元和表示$\left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right)$的神经元以及表示 OR 的神经元进行组合：
+然后将表示 **AND** 的神经元和表示$\left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right)$的神经元以及表示 OR 的神经元进行组合：
 
 ![](images/432c906875baca78031bd337fe0c8682.jpg)
 
@@ -229,7 +229,7 @@ OR与AND整体一样，区别只在于的取值不同。
 
 当我们有不止两种分类时（也就是$y=1,2,3….$），比如以下这种情况，该怎么办？如果我们要训练一个神经网络算法来识别路人、汽车、摩托车和卡车，在输出层我们应该有4个值。例如，第一个值为1或0用于预测是否是行人，第二个值用于判断是否为汽车。
 
-输入向量x有三个维度，两个中间层，输出层4个神经元分别用来表示4类，也就是每一个数据在输出层都会出现${{\left[ a\text{ }b\text{ }c\text{ }d \right]}^{T}}​$，且a,b,c,d中仅有一个为1，表示当前类。下面是该神经网络的可能结构示例：
+输入向量$x$有三个维度，两个中间层，输出层4个神经元分别用来表示4类，也就是每一个数据在输出层都会出现${{\left[ a\text{ }b\text{ }c\text{ }d \right]}^{T}}$，且$a,b,c,d$中仅有一个为1，表示当前类。下面是该神经网络的可能结构示例：
 
 ![](images/f3236b14640fa053e62c73177b3474ed.jpg)
 
