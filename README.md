@@ -30,6 +30,10 @@ markdown的笔记和课程中英文字幕我将放在github和码云，希望大
 
 docx：笔记的word版本
 
+markdown：笔记的markdown版本
+
+html：笔记的html版本
+
 media：笔记的图片
 
 ppt：课程的原版课件
@@ -38,9 +42,9 @@ srt：课程的中英文字幕（mp4文件需要在百度云下载）
 
 code：课程的python代码（有一部分是国外大牛写的）
 
-机器学习视频下载链接：http://pan.baidu.com/s/1dFCQvxZ 密码：dce8
+机器学习视频下载链接：https://pan.baidu.com/s/1raoOPOg 密码：48m8
 
-包含mp4视频和字幕
+包含视频和字幕，下载后解压。
 
 [笔记在线阅读](http://www.ai-start.com/ml2014)
 
