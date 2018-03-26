@@ -2,12 +2,18 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>机器学习个人笔记-目录</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --code-block-bg-color: inherit; }
+<title>SUMMARY.md</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}#write, body { height: auto; }
+#write, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write ol, #write p, #write ul { position: relative; }
+#write, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+.CodeMirror, .md-fences, table { text-align: left; }
+.md-reset, a:active, a:hover { outline: 0px; }
+.md-reset, .md-toc-item a { text-decoration: none; }
+.MathJax_SVG, .md-reset { float: none; direction: ltr; }
+:root { --bg-color:#ffffff; --text-color:#333333; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
-a:active, a:hover { outline: 0px; }
+body { margin: 0px; padding: 0px; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 .in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; contain: layout paint; }
+#write { margin: 0px auto; word-break: normal; word-wrap: break-word; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
@@ -16,14 +22,12 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
   .CodeMirror-gutters { display: none !important; }
 }
 .typora-export #write { margin: 0px auto; }
-#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write > blockquote:first-child, #write > div:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > table:first-child, #write > ul:first-child { margin-top: 30px; }
 #write li > table:first-child { margin-top: -20px; }
 img { max-width: 100%; vertical-align: middle; }
-input, button, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-::before, ::after, * { box-sizing: border-box; }
-#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
-#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+*, ::after, ::before { box-sizing: border-box; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
 h3 { font-size: 1.6rem; }
@@ -32,25 +36,26 @@ h5 { font-size: 1.2rem; }
 h6 { font-size: 1rem; }
 p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
 .typora-export p { white-space: normal; }
-.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0px; -webkit-margin-after: 0px; }
 .hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
 a { cursor: pointer; }
 sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+#write > figure:first-child { margin-top: 16px; }
+figure { overflow-x: auto; margin: -8px 0px 0px -8px; max-width: calc(100% + 16px); padding: 8px; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; }
+.CodeMirror-line, .md-fences { break-inside: avoid; }
 table.md-table td { min-width: 80px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror { text-align: left; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; margin-right: 4px; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
 .CodeMirror-lines { padding: 0px; }
 div.hr:focus { cursor: none; }
 pre { white-space: pre-wrap; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: var(--code-block-bg-color); position: relative !important; }
+.md-fences { font-size: 0.9rem; display: block; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
 .md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 .md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
 .md-fences.mock-cm { white-space: pre-wrap; }
@@ -58,45 +63,45 @@ pre { white-space: pre-wrap; }
 .show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
 .footnotes + .footnotes { margin-top: -1em; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; vertical-align: top; background: 0px 0px; text-shadow: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; }
+.md-toc-inner, a img, img a { cursor: pointer; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
-li p, li .mathjax-block { margin: 0.5rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
 li { margin: 0px; position: relative; }
 blockquote > :last-child { margin-bottom: 0px; }
 blockquote > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: nowrap; }
 @media print {
-  html, body { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
   p { orphans: 4; }
   html.blink-to-pdf { font-size: 13px; }
   .typora-export #write { padding-left: 1cm; padding-right: 1cm; padding-bottom: 0px; break-after: avoid; }
   .typora-export #write::after { height: 0px; }
-  @page { margin: 20mm 0mm; }
+  @page { margin: 20mm 0px; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > img:only-child { display: block; margin: auto; }
+.md-line > .md-image:only-child, p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+.mathjax-block:not(:empty)::after, .md-toc-content::after, .md-toc::after { display: none; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
 p + .mathjax-block { margin-top: -1.143rem; }
-.mathjax-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
-.task-list { list-style-type: none; }
-.task-list-item { position: relative; padding-left: 1em; }
-.task-list-item input { position: absolute; top: 0px; left: 0px; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
 .math { font-size: 1rem; }
 .md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.MathJax_SVG, .mathjax-block .MathJax_SVG_Display { text-indent: 0px; max-width: none; max-height: none; min-height: 0px; }
 .md-toc-content { position: relative; margin-left: 0px; }
-.md-toc::after, .md-toc-content::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
 .md-toc-inner:hover { }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-inner { display: inline-block; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
 .md-toc-h2 .md-toc-inner { margin-left: 2em; }
 .md-toc-h3 .md-toc-inner { margin-left: 4em; }
 .md-toc-h4 .md-toc-inner { margin-left: 6em; }
@@ -113,19 +118,21 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 .md-tag { opacity: 0.5; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+code, pre, tt { font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
 code { text-align: left; }
 h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
-a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background: transparent !important; text-decoration: initial !important; text-shadow: initial !important; }
+a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
-.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0px; position: relative; min-width: 100%; width: auto; display: block !important; }
 .MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
 .MathJax_SVG .MJX-monospace { font-family: monospace; }
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; min-width: 0px; border: 0px; padding: 0px; margin: 0px; }
 .MathJax_SVG * { transition: none; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+.md-diagram-panel > svg, [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
 
 
 :root { --side-bar-bg-color: #fafafa; --control-text-color: #777; }
@@ -172,16 +179,14 @@ blockquote blockquote { padding-right: 0px; }
 table { padding: 0px; word-break: initial; }
 table tr { border-top: 1px solid rgb(204, 204, 204); margin: 0px; padding: 0px; }
 table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
-table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th { font-weight: bold; border-width: 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-left-style: solid; border-top-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); border-left-color: rgb(204, 204, 204); border-image: initial; border-bottom-style: initial; border-bottom-color: initial; text-align: left; margin: 0px; padding: 6px 13px; }
 table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
 table tr th:first-child, table tr td:first-child { margin-top: 0px; }
 table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
 .CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
 .md-fences, code, tt { border: 1px solid rgb(221, 221, 221); background-color: rgb(248, 248, 248); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
 .md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
-.task-list { padding-left: 0px; }
-.task-list-item { padding-left: 32px; }
-.task-list-item input { top: 3px; left: 8px; }
+.md-task-list-item > input { margin-left: -1.3em; }
 @media screen and (min-width: 914px) {
 }
 @media print {
@@ -196,7 +201,7 @@ table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
 #write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
 #write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
 #write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-.md-image > .md-meta { border: 1px solid rgb(221, 221, 221); border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-image > .md-meta { border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
 .md-tag { color: inherit; }
 .md-toc { margin-top: 20px; padding-bottom: 20px; }
 .sidebar-tabs { border-bottom: none; }
@@ -208,12 +213,16 @@ header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Aria
 .file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
 .mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
 .md-lang { color: rgb(180, 101, 77); }
+.html-for-mac .context-menu { --item-hover-bg-color: #E6F0FE; }
+
+
+
+
 
 
 </style>
 </head>
 <body class='typora-export' >
-<div  id='write'  class = 'is-node'><h1><a name='header-n370' class='md-header-anchor '></a>斯坦福大学2014机器学习教程中文笔记目录</h1><ul><li><a href='week1.html' target=_blank>第一周</a></li></ul><p>一、 引言(Introduction) </p><p>1.1 欢迎 </p><p>1.2 机器学习是什么？ </p><p>1.3 监督学习 </p><p>1.4 无监督学习 </p><p>二、单变量线性回归(Linear Regression with One Variable) </p><p>2.1 模型表示 </p><p>2.2 代价函数 </p><p>2.3 代价函数的直观理解I </p><p>2.4 代价函数的直观理解II </p><p>2.5 梯度下降 </p><p>2.6 梯度下降的直观理解 </p><p>2.7 梯度下降的线性回归 </p><p>2.8 接下来的内容 </p><p>三、线性代数回顾(Linear Algebra Review) </p><p>3.1 矩阵和向量 </p><p>3.2 加法和标量乘法 </p><p>3.3 矩阵向量乘法 </p><p>3.4 矩阵乘法 </p><p>3.5 矩阵乘法的性质 </p><p>3.6 逆、转置</p><ul><li><a href='week2.html' target=_blank>第二周</a></li></ul><p>四、多变量线性回归(Linear Regression with Multiple Variables) </p><p>4.1 多维特征 </p><p>4.2 多变量梯度下降 </p><p>4.3 梯度下降法实践1-特征缩放 </p><p>4.4 梯度下降法实践2-学习率 </p><p>4.5 特征和多项式回归 </p><p>4.6 正规方程 </p><p>4.7 正规方程及不可逆性（选修） </p><p>五、Octave教程(Octave Tutorial) </p><p>5.1 基本操作 </p><p>5.2 移动数据 </p><p>5.3 计算数据 </p><p>5.4 绘图数据 </p><p>5.5 控制语句：for，while，if语句 </p><p>5.6 向量化 88</p><p>5.7 工作和提交的编程练习 </p><ul><li><a href='week3.html' target=_blank>第三周</a></li></ul><p>六、逻辑回归(Logistic Regression) </p><p>6.1 分类问题 </p><p>6.2 假说表示 </p><p>6.3 判定边界 </p><p>6.4 代价函数 </p><p>6.5 简化的成本函数和梯度下降 </p><p>6.6 高级优化 </p><p>6.7 多类别分类：一对多 </p><p>七、正则化(Regularization) </p><p>7.1 过拟合的问题 </p><p>7.2 代价函数 </p><p>7.3 正则化线性回归 </p><p>7.4 正则化的逻辑回归模型 </p><ul><li><a href='week4.html' target=_blank>第四周</a></li></ul><p>第八、神经网络：表述(Neural Networks: Representation) </p><p>8.1 非线性假设 </p><p>8.2 神经元和大脑 </p><p>8.3 模型表示1 </p><p>8.4 模型表示2 </p><p>8.5 样本和直观理解1 </p><p>8.6 样本和直观理解II </p><p>8.7 多类分类 </p><ul><li><a href='week5.html' target=_blank>第五周</a></li></ul><p>九、神经网络的学习(Neural Networks: Learning) </p><p>9.1 代价函数 </p><p>9.2 反向传播算法 </p><p>9.3 反向传播算法的直观理解 </p><p>9.4 实现注意：展开参数 </p><p>9.5 梯度检验 </p><p>9.6 随机初始化 </p><p>9.7 综合起来 </p><p>9.8 自主驾驶 </p><ul><li><a href='week6.html' target=_blank>第六周</a></li></ul><p>十、应用机器学习的建议(Advice for Applying Machine Learning) </p><p>10.1 决定下一步做什么 </p><p>10.2 评估一个假设 </p><p>10.3 模型选择和交叉验证集 </p><p>10.4 诊断偏差和方差 </p><p>10.5 正则化和偏差/方差 </p><p>10.6 学习曲线 </p><p>10.7 决定下一步做什么 </p><p>十一、机器学习系统的设计(Machine Learning System Design) </p><p>11.1 首先要做什么 </p><p>11.2 误差分析 </p><p>11.3 类偏斜的误差度量 </p><p>11.4 查准率和查全率之间的权衡 </p><p>11.5 机器学习的数据 </p><p><a href='week7.html' target=_blank>第7周</a></p><p>十二、支持向量机(Support Vector Machines) </p><p>12.1 优化目标 </p><p>12.2 大边界的直观理解 </p><p>12.3 数学背后的大边界分类（选修） </p><p>12.4 核函数1 </p><p>12.5 核函数2 </p><p>12.6 使用支持向量机 </p><ul><li><a href='week8.html' target=_blank>第八周</a></li></ul><p>十三、聚类(Clustering) </p><p>13.1 无监督学习：简介 </p><p>13.2 K-均值算法 </p><p>13.3 优化目标 </p><p>13.4 随机初始化</p><p>13.5 选择聚类数 </p><p>十四、降维(Dimensionality Reduction) </p><p>14.1 动机一：数据压缩 </p><p>14.2 动机二：数据可视化 </p><p>14.3 主成分分析问题 </p><p>14.4 主成分分析算法 </p><p>14.5 选择主成分的数量 </p><p>14.6 重建的压缩表示 </p><p>14.7 主成分分析法的应用建议 </p><ul><li><a href='week9.html' target=_blank>第九周</a></li></ul><p>十五、异常检测(Anomaly Detection) </p><p>15.1 问题的动机 </p><p>15.2 高斯分布 </p><p>15.3 算法 </p><p>15.4 开发和评价一个异常检测系统 </p><p>15.5 异常检测与监督学习对比 </p><p>15.6 选择特征 </p><p>15.7 多元高斯分布（选修） </p><p>15.8 使用多元高斯分布进行异常检测（选修） </p><p>十六、推荐系统(Recommender Systems) </p><p>16.1 问题形式化 </p><p>16.2 基于内容的推荐系统 </p><p>16.3 协同过滤 </p><p>16.4 协同过滤算法 </p><p>16.5 向量化：低秩矩阵分解 </p><p>16.6 推行工作上的细节：均值归一化 </p><ul><li><a href='week10.html' target=_blank>第十周</a></li></ul><p>十七、大规模机器学习(Large Scale Machine Learning) </p><p>17.1 大型数据集的学习 </p><p>17.2 随机梯度下降法 </p><p>17.3 小批量梯度下降 </p><p>17.4 随机梯度下降收敛 </p><p>17.5 在线学习 </p><p>17.6 映射化简和数据并行 </p><p>十八、应用实例：图片文字识别(Application Example: Photo OCR) </p><p>18.1 问题描述和流程图</p><p>18.2 滑动窗口 </p><p>18.3 获取大量数据和人工数据 </p><p>18.4 上限分析：哪部分管道的接下去做 </p><p>十九、总结(Conclusion) </p><p>19.1 总结和致谢 </p><hr /><p><strong>机器学习视频下载链接：<a href='http://pan.baidu.com/s/1dFCQvxZ' target='_blank' >http://pan.baidu.com/s/1dFCQvxZ</a> 密码：dce8</strong></p><p><strong>包含mp4视频和字幕</strong></p><p><strong><a href='index.html' target=_blank>笔记在线阅读</a></strong></p><p><strong><a href='%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E5%AE%8C%E6%95%B4%E7%89%88v5.pdf'>笔记pdf版本下载</a></strong></p><p><strong>机器学习qq群：554839127</strong></p></div>
-<script src="https://s13.cnzz.com/z_stat.php?id=1267346656&web_id=1267346656" language="JavaScript"></script>
+<div  id='write'  class = 'is-node'><h1><a name='header-n1044' class='md-header-anchor '></a>斯坦福大学2014机器学习教程中文笔记目录</h1><ul><li><a href='html/week1.html'>第一周</a></li></ul><p>一、 引言(Introduction) </p><p>1.1 欢迎 </p><p>1.2 机器学习是什么？ </p><p>1.3 监督学习 </p><p>1.4 无监督学习 </p><p>二、单变量线性回归(Linear Regression with One Variable) </p><p>2.1 模型表示 </p><p>2.2 代价函数 </p><p>2.3 代价函数的直观理解I </p><p>2.4 代价函数的直观理解II </p><p>2.5 梯度下降 </p><p>2.6 梯度下降的直观理解 </p><p>2.7 梯度下降的线性回归 </p><p>2.8 接下来的内容 </p><p>三、线性代数回顾(Linear Algebra Review) </p><p>3.1 矩阵和向量 </p><p>3.2 加法和标量乘法 </p><p>3.3 矩阵向量乘法 </p><p>3.4 矩阵乘法 </p><p>3.5 矩阵乘法的性质 </p><p>3.6 逆、转置</p><ul><li><a href='html/week2.html'>第二周</a></li></ul><p>四、多变量线性回归(Linear Regression with Multiple Variables) </p><p>4.1 多维特征 </p><p>4.2 多变量梯度下降 </p><p>4.3 梯度下降法实践1-特征缩放 </p><p>4.4 梯度下降法实践2-学习率 </p><p>4.5 特征和多项式回归 </p><p>4.6 正规方程 </p><p>4.7 正规方程及不可逆性（选修） </p><p>五、Octave教程(Octave Tutorial) </p><p>5.1 基本操作 </p><p>5.2 移动数据 </p><p>5.3 计算数据 </p><p>5.4 绘图数据 </p><p>5.5 控制语句：for，while，if语句 </p><p>5.6 向量化 88</p><p>5.7 工作和提交的编程练习 </p><ul><li><a href='html/week3.html'>第三周</a></li></ul><p>六、逻辑回归(Logistic Regression) </p><p>6.1 分类问题 </p><p>6.2 假说表示 </p><p>6.3 判定边界 </p><p>6.4 代价函数 </p><p>6.5 简化的成本函数和梯度下降 </p><p>6.6 高级优化 </p><p>6.7 多类别分类：一对多 </p><p>七、正则化(Regularization) </p><p>7.1 过拟合的问题 </p><p>7.2 代价函数 </p><p>7.3 正则化线性回归 </p><p>7.4 正则化的逻辑回归模型 </p><ul><li><a href='html/week4.html'>第四周</a></li></ul><p>第八、神经网络：表述(Neural Networks: Representation) </p><p>8.1 非线性假设 </p><p>8.2 神经元和大脑 </p><p>8.3 模型表示1 </p><p>8.4 模型表示2 </p><p>8.5 样本和直观理解1 </p><p>8.6 样本和直观理解II </p><p>8.7 多类分类 </p><ul><li><a href='html/week5.html'>第五周</a></li></ul><p>九、神经网络的学习(Neural Networks: Learning) </p><p>9.1 代价函数 </p><p>9.2 反向传播算法 </p><p>9.3 反向传播算法的直观理解 </p><p>9.4 实现注意：展开参数 </p><p>9.5 梯度检验 </p><p>9.6 随机初始化 </p><p>9.7 综合起来 </p><p>9.8 自主驾驶 </p><ul><li><a href='html/week6.html'>第六周</a></li></ul><p>十、应用机器学习的建议(Advice for Applying Machine Learning) </p><p>10.1 决定下一步做什么 </p><p>10.2 评估一个假设 </p><p>10.3 模型选择和交叉验证集 </p><p>10.4 诊断偏差和方差 </p><p>10.5 正则化和偏差/方差 </p><p>10.6 学习曲线 </p><p>10.7 决定下一步做什么 </p><p>十一、机器学习系统的设计(Machine Learning System Design) </p><p>11.1 首先要做什么 </p><p>11.2 误差分析 </p><p>11.3 类偏斜的误差度量 </p><p>11.4 查准率和查全率之间的权衡 </p><p>11.5 机器学习的数据 </p><p><a href='html/week7.html'>第7周</a></p><p>十二、支持向量机(Support Vector Machines) </p><p>12.1 优化目标 </p><p>12.2 大边界的直观理解 </p><p>12.3 数学背后的大边界分类（选修） </p><p>12.4 核函数1 </p><p>12.5 核函数2 </p><p>12.6 使用支持向量机 </p><ul><li><a href='html/week8.html'>第八周</a></li></ul><p>十三、聚类(Clustering) </p><p>13.1 无监督学习：简介 </p><p>13.2 K-均值算法 </p><p>13.3 优化目标 </p><p>13.4 随机初始化</p><p>13.5 选择聚类数 </p><p>十四、降维(Dimensionality Reduction) </p><p>14.1 动机一：数据压缩 </p><p>14.2 动机二：数据可视化 </p><p>14.3 主成分分析问题 </p><p>14.4 主成分分析算法 </p><p>14.5 选择主成分的数量 </p><p>14.6 重建的压缩表示 </p><p>14.7 主成分分析法的应用建议 </p><ul><li><a href='html/week9.html'>第九周</a></li></ul><p>十五、异常检测(Anomaly Detection) </p><p>15.1 问题的动机 </p><p>15.2 高斯分布 </p><p>15.3 算法 </p><p>15.4 开发和评价一个异常检测系统 </p><p>15.5 异常检测与监督学习对比 </p><p>15.6 选择特征 </p><p>15.7 多元高斯分布（选修） </p><p>15.8 使用多元高斯分布进行异常检测（选修） </p><p>十六、推荐系统(Recommender Systems) </p><p>16.1 问题形式化 </p><p>16.2 基于内容的推荐系统 </p><p>16.3 协同过滤 </p><p>16.4 协同过滤算法 </p><p>16.5 向量化：低秩矩阵分解 </p><p>16.6 推行工作上的细节：均值归一化 </p><ul><li><a href='html/week10.html'>第十周</a></li></ul><p>十七、大规模机器学习(Large Scale Machine Learning) </p><p>17.1 大型数据集的学习 </p><p>17.2 随机梯度下降法 </p><p>17.3 小批量梯度下降 </p><p>17.4 随机梯度下降收敛 </p><p>17.5 在线学习 </p><p>17.6 映射化简和数据并行 </p><p>十八、应用实例：图片文字识别(Application Example: Photo OCR) </p><p>18.1 问题描述和流程图</p><p>18.2 滑动窗口 </p><p>18.3 获取大量数据和人工数据 </p><p>18.4 上限分析：哪部分管道的接下去做 </p><p>十九、总结(Conclusion) </p><p>19.1 总结和致谢 </p><hr /><p><strong>机器学习视频下载链接：<a href='http://pan.baidu.com/s/1dFCQvxZ' target='_blank' >http://pan.baidu.com/s/1dFCQvxZ</a> 密码：dce8</strong></p><p><strong>包含mp4视频和字幕</strong></p><p><strong><a href='index.html'>笔记在线阅读</a></strong></p><p><strong><a href='%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E5%AE%8C%E6%95%B4%E7%89%88v4.7.pdf'>笔记pdf版本下载</a></strong></p><p><strong>机器学习qq群：554839127</strong></p></div>
 </body>
 </html>
