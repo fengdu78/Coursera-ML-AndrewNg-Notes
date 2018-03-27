@@ -141,7 +141,7 @@ ${{{h}}_{\theta}}(x)={{\theta }_{0}}\text{+}{{\theta }_{1}}(size)+{{\theta}_{1}}
 
 或者:
 
-${{t{h}}_{\theta}}(x)={{\theta }_{0}}\text{+}{{\theta }_{1}}(size)+{{\theta }_{1}}\sqrt{size}$
+${{{h}}_{\theta}}(x)={{\theta }_{0}}\text{+}{{\theta }_{1}}(size)+{{\theta }_{1}}\sqrt{size}$
 
 注：如果我们采用多项式回归模型，在运行梯度下降算法前，特征缩放非常有必要。
 

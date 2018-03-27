@@ -371,19 +371,25 @@ ${\theta_{j}}:={\theta_{j}}-\alpha \frac{\partial }{\partial {\theta_{j}}}J\left
 
 对我们之前的线性回归问题运用梯度下降法，关键在于求出代价函数的导数，即：
 
-![](../images/a6efa292d096f7b8290e4c2f13b28508.png)
+$\frac{\partial }{\partial {{\theta }_{j}}}J({{\theta }_{0}},{{\theta }_{1}})=\frac{\partial }{\partial {{\theta }_{j}}}\frac{1}{2m}{{\sum\limits_{i=1}^{m}{\left( {{h}_{\theta }}({{x}^{(i)}})-{{y}^{(i)}} \right)}}^{2}}$
 
-![](../images/a551794073098649c7d11a8d1d659a65.png)
+$\frac{\partial }{\partial {{\theta }_{0}}}J({{\theta }_{0}},{{\theta }_{1}})=\frac{1}{m}{{\sum\limits_{i=1}^{m}{\left( {{h}_{\theta }}({{x}^{(i)}})-{{y}^{(i)}} \right)}}}$
 
 $j=0$  时：
 
-![](../images/f045799e2e3a9fd4aca785291fe8c82e.png)
+$\frac{\partial }{\partial {{\theta }_{1}}}J({{\theta }_{0}},{{\theta }_{1}})=\frac{1}{m}\sum\limits_{i=1}^{m}{\left( \left( {{h}_{\theta }}({{x}^{(i)}})-{{y}^{(i)}} \right)\cdot {{x}^{(i)}} \right)}$
 
 $j=1$  时：
 
 则算法改写成：
 
-![](../images/ef564af7fe890e454e557b47115092e4.png)
+**Repeat {**
+
+​                ${\theta_{0}}:={\theta_{0}}-a\frac{1}{m}\sum\limits_{i=1}^{m}{ \left({{h}_{\theta }}({{x}^{(i)}})-{{y}^{(i)}} \right)}$
+
+​                ${\theta_{1}}:={\theta_{1}}-a\frac{1}{m}\sum\limits_{i=1}^{m}{\left( \left({{h}_{\theta }}({{x}^{(i)}})-{{y}^{(i)}} \right)\cdot {{x}^{(i)}} \right)}$
+
+​               **}**
 
 我们刚刚使用的算法，有时也称为批量梯度下降。实际上，在机器学习中，通常不太会给算法起名字，但这个名字”**批量梯度下降**”，指的是在梯度下降的每一步中，我们都用到了所有的训练样本，在梯度下降中，在计算微分求导项时，我们需要进行求和运算，所以，在每一个单独的梯度下降中，我们最终都要计算这样一个东西，这个项需要对所有$m$个训练样本求和。因此，批量梯度下降法这个名字说明了我们需要考虑所有这一"批"训练样本，而事实上，有时也有其他类型的梯度下降法，不是这种"批量"型的，不考虑整个的训练集，而是每次只关注训练集中的一些小的子集。在后面的课程中，我们也将介绍这些方法。
 
@@ -504,7 +510,7 @@ $A{{A}^{-1}}={{A}^{-1}}A=I$
 
 例：
 
-![](../images/91259aa5d0d28587fb50b1a9b2a46bd8.png)
+${{\left| \begin{matrix}   a& b  \\   b& d  \\   e& f  \\\end{matrix} \right|}^{T}}=\left|\begin{matrix}   a& c & e  \\   b& d & f  \\\end{matrix} \right|$
 
 矩阵的转置基本性质:
 
