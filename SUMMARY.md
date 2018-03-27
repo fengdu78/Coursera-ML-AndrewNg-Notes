@@ -2,7 +2,7 @@
 
 * [第一周](html/week1.html)
 
-一、 引言(Introduction) 
+一、 引言(**Introduction**) 
 
 1.1 欢迎 
 
@@ -12,7 +12,7 @@
 
 1.4 无监督学习 
 
-二、单变量线性回归(Linear Regression with One Variable) 
+二、单变量线性回归**(Linear Regression with One Variable**) 
 
 2.1 模型表示 
 
@@ -30,7 +30,7 @@
 
 2.8 接下来的内容 
 
-三、线性代数回顾(Linear Algebra Review) 
+三、线性代数回顾(**Linear Algebra Review**) 
 
 3.1 矩阵和向量 
 
@@ -46,7 +46,7 @@
 
 * [第二周](html/week2.html)
 
-四、多变量线性回归(Linear Regression with Multiple Variables) 
+四、多变量线性回归(**Linear Regression with Multiple Variables**) 
 
 4.1 多维特征 
 
@@ -62,7 +62,7 @@
 
 4.7 正规方程及不可逆性（选修） 
 
-五、Octave教程(Octave Tutorial) 
+五、Octave教程(**Octave Tutorial**) 
 
 5.1 基本操作 
 
@@ -72,7 +72,7 @@
 
 5.4 绘图数据 
 
-5.5 控制语句：for，while，if语句 
+5.5 控制语句：**for**，**while**，**if**语句 
 
 5.6 向量化 88
 
@@ -80,7 +80,7 @@
 
 * [第三周](html/week3.html)
 
-六、逻辑回归(Logistic Regression) 
+六、逻辑回归(**Logistic Regression**) 
 
 6.1 分类问题 
 
@@ -96,7 +96,7 @@
 
 6.7 多类别分类：一对多 
 
-七、正则化(Regularization) 
+七、正则化(**Regularization**) 
 
 7.1 过拟合的问题 
 
@@ -108,7 +108,7 @@
 
 * [第四周](html/week4.html)
 
-第八、神经网络：表述(Neural Networks: Representation) 
+第八、神经网络：表述(**Neural Networks: Representation**) 
 
 8.1 非线性假设 
 
@@ -126,7 +126,7 @@
 
 * [第五周](html/week5.html)
 
-九、神经网络的学习(Neural Networks: Learning) 
+九、神经网络的学习(**Neural Networks: Learning**) 
 
 9.1 代价函数 
 
@@ -146,7 +146,7 @@
 
 * [第六周](html/week6.html)
 
-十、应用机器学习的建议(Advice for Applying Machine Learning) 
+十、应用机器学习的建议(**Advice for Applying Machine Learning**) 
 
 10.1 决定下一步做什么 
 
@@ -162,7 +162,7 @@
 
 10.7 决定下一步做什么 
 
-十一、机器学习系统的设计(Machine Learning System Design) 
+十一、机器学习系统的设计(**Machine Learning System Design**) 
 
 11.1 首先要做什么 
 
@@ -176,7 +176,7 @@
 
 [第7周](html/week7.html)
 
-十二、支持向量机(Support Vector Machines) 
+十二、支持向量机(**Support Vector Machines**) 
 
 12.1 优化目标 
 
@@ -192,7 +192,7 @@
 
 * [第八周](html/week8.html)
 
-十三、聚类(Clustering) 
+十三、聚类(**Clustering**) 
 
 13.1 无监督学习：简介 
 
@@ -204,7 +204,7 @@
 
 13.5 选择聚类数 
 
-十四、降维(Dimensionality Reduction) 
+十四、降维(**Dimensionality Reduction**) 
 
 14.1 动机一：数据压缩 
 
@@ -222,7 +222,7 @@
 
 * [第九周](html/week9.html)
 
-十五、异常检测(Anomaly Detection) 
+十五、异常检测(**Anomaly Detection**) 
 
 15.1 问题的动机 
 
@@ -240,7 +240,7 @@
 
 15.8 使用多元高斯分布进行异常检测（选修） 
 
-十六、推荐系统(Recommender Systems) 
+十六、推荐系统(**Recommender Systems**) 
 
 16.1 问题形式化 
 
@@ -256,7 +256,7 @@
 
 * [第十周](html/week10.html)
 
-十七、大规模机器学习(Large Scale Machine Learning) 
+十七、大规模机器学习(**Large Scale Machine Learning**) 
 
 17.1 大型数据集的学习 
 
@@ -270,7 +270,7 @@
 
 17.6 映射化简和数据并行 
 
-十八、应用实例：图片文字识别(Application Example: Photo OCR) 
+十八、应用实例：图片文字识别(**Application Example: Photo OCR**) 
 
 18.1 问题描述和流程图
 
@@ -280,18 +280,12 @@
 
 18.4 上限分析：哪部分管道的接下去做 
 
-十九、总结(Conclusion) 
+十九、总结(**Conclusion**) 
 
 19.1 总结和致谢 
 
 ---------------
 
-**机器学习视频下载链接：http://pan.baidu.com/s/1dFCQvxZ 密码：dce8**
 
-**包含mp4视频和字幕**
-
-**[笔记在线阅读](index.html)**
-
-**[笔记pdf版本下载](机器学习个人笔记完整版v4.7.pdf)**
 
 **机器学习qq群：554839127**
