@@ -1,6 +1,4 @@
-**斯坦福大学2014机器学习教程中文笔记**
-
-课程目录：[目录](index.html)
+**斯坦福大学2014（吴恩达）机器学习教程中文笔记**
 
 课程地址：<https://www.coursera.org/course/ml>
 
@@ -26,7 +24,7 @@
 
 黄海广
 
-2017-11-3 夜
+2018-3-26 夜
 
 [我的知乎](https://www.zhihu.com/people/fengdu78/activities)
 
