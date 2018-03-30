@@ -129,6 +129,75 @@ $$J(c^{(1)},...,c^{(m)},μ_1,...,μ_K)=\dfrac {1}{m}\sum^{m}_{i=1}\left\| X^{\le
 
 例如，我们的 T-恤制造例子中，我们要将用户按照身材聚类，我们可以分成3个尺寸:$S,M,L$，也可以分成5个尺寸$XS,S,M,L,XL$，这样的选择是建立在回答“聚类后我们制造的T-恤是否能较好地适合我们的客户”这个问题的基础上作出的。
 
+**参考：**
+
+1.相似度/距离计算方法总结
+
+闵可夫斯基距离**Minkowski**/（其中欧式距离：$p=2$) 
+
+$dist(X,Y)={{\left( {{\sum\limits_{i=1}^{n}{\left| {{x}_{i}}-{{y}_{i}} \right|}}^{p}} \right)}^{\frac{1}{p}}}$
+
+杰卡德相似系数(**Jaccard**)：
+
+$J(A,B)=\frac{\left| A\cap B \right|}{\left|A\cup B \right|}$
+
+余弦相似度(**cosine similarity**)：
+
+$n$维向量$x$和$y$的夹角记做$\theta$，根据余弦定理，其余弦值为：
+
+$cos (\theta )=\frac{{{x}^{T}}y}{\left|x \right|\cdot \left| y \right|}=\frac{\sum\limits_{i=1}^{n}{{{x}_{i}}{{y}_{i}}}}{\sqrt{\sum\limits_{i=1}^{n}{{{x}_{i}}^{2}}}\sqrt{\sum\limits_{i=1}^{n}{{{y}_{i}}^{2}}}}$
+Pearson皮尔逊相关系数：
+${{\rho }_{XY}}=\frac{\operatorname{cov}(X,Y)}{{{\sigma }_{X}}{{\sigma }_{Y}}}=\frac{E[(X-{{\mu }_{X}})(Y-{{\mu }_{Y}})]}{{{\sigma }_{X}}{{\sigma }_{Y}}}=\frac{\sum\limits_{i=1}^{n}{(x-{{\mu }_{X}})(y-{{\mu }_{Y}})}}{\sqrt{\sum\limits_{i=1}^{n}{{{(x-{{\mu }_{X}})}^{2}}}}\sqrt{\sum\limits_{i=1}^{n}{{{(y-{{\mu }_{Y}})}^{2}}}}}$
+
+Pearson相关系数即将$x$、$y$坐标向量各自平移到原点后的夹角余弦。
+
+2.聚类的衡量指标
+
+均一性：$p$
+
+类似于精确率，一个簇中只包含一个类别的样本，则满足均一性。其实也可以认为就是正确率(每个 聚簇中正确分类的样本数占该聚簇总样本数的比例和)
+
+完整性：$r$
+
+类似于召回率，同类别样本被归类到相同簇中，则满足完整性;每个聚簇中正确分类的样本数占该 
+类型的总样本数比例的和
+
+**V-measure**:
+
+均一性和完整性的加权平均 
+
+$V = \frac{(1+\beta^2)*pr}{\beta^2*p+r}$
+
+轮廓系数
+
+样本$i$的轮廓系数：$s(i)$
+
+簇内不相似度:计算样本$i$到同簇其它样本的平均距离为$a(i)$，应尽可能小。
+
+簇间不相似度:计算样本$i$到其它簇$C_j$的所有样本的平均距离$b_{ij}$，应尽可能大。
+
+轮廓系数：$s(i)$值越接近1表示样本$i$聚类越合理，越接近-1，表示样本$i$应该分类到 另外的簇中，近似为0，表示样本$i$应该在边界上;所有样本的$s(i)$的均值被成为聚类结果的轮廓系数。 
+
+$s(i) = \frac{b(i)-a(i)}{max\{a(i),b(i)\}}$
+
+**ARI**
+
+数据集$S$共有$N$个元素，  两个聚类结果分别是：
+
+$X=\{{{X}_{1}},{{X}_{2}},...,{{X}_{r}}\},Y=\{{{Y}_{1}},{{Y}_{2}},...,{{Y}_{s}}\}$
+
+$X$和$Y$的元素个数为：
+
+$a=\{{{a}_{1}},{{a}_{2}},...,{{a}_{r}}\},b=\{{{b}_{1}},{{b}_{2}},...,{{b}_{s}}\}$
+
+记：${{n}_{ij}}=\left| {{X}_{i}}\cap {{Y}_{i}} \right|$
+
+$ARI=\frac{\sum\limits_{i,j}{C_{{{n}_{ij}}}^{2}}-\left[ \left( \sum\limits_{i}{C_{{{a}_{i}}}^{2}} \right)\cdot \left( \sum\limits_{i}{C_{{{b}_{i}}}^{2}} \right) \right]/C_{n}^{2}}{\frac{1}{2}\left[ \left( \sum\limits_{i}{C_{{{a}_{i}}}^{2}} \right)+\left( \sum\limits_{i}{C_{{{b}_{i}}}^{2}} \right) \right]-\left[ \left( \sum\limits_{i}{C_{{{a}_{i}}}^{2}} \right)\cdot \left( \sum\limits_{i}{C_{{{b}_{i}}}^{2}} \right) \right]/C_{n}^{2}}$
+
+AMI
+
+
+
 十四、降维(Dimensionality Reduction)
 ------------------------------------
 
