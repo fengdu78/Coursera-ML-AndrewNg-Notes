@@ -28,6 +28,8 @@
 
 [我的知乎](https://www.zhihu.com/people/fengdu78/activities)
 
+## 备注：吴恩达老师的深度学习课（deepLearning.ai）的笔记地址：https://github.com/fengdu78/deeplearning_ai_books
+
 -----------------------
 
 文件夹说明：
@@ -58,7 +60,7 @@
 
 # 机器学习教程中文笔记目录
 
-- [第一周](html/week1.html)
+- [第一周](markdown/week1.md)
 
 一、 引言(**Introduction**) 
 
@@ -102,7 +104,7 @@
 
 3.6 逆、转置
 
-- [第二周](html/week2.html)
+- [第二周](markdown/week2.md)
 
 四、多变量线性回归(**Linear Regression with Multiple Variables**) 
 
@@ -136,7 +138,7 @@
 
 5.7 工作和提交的编程练习 
 
-- [第三周](html/week3.html)
+- [第三周](markdown/week3.md)
 
 六、逻辑回归(**Logistic Regression**) 
 
@@ -164,7 +166,7 @@
 
 7.4 正则化的逻辑回归模型 
 
-- [第四周](html/week4.html)
+- [第四周](markdown/week4.md)
 
 第八、神经网络：表述(**Neural Networks: Representation**) 
 
@@ -182,7 +184,7 @@
 
 8.7 多类分类 
 
-- [第五周](html/week5.html)
+- [第五周](markdown/week5.md)
 
 九、神经网络的学习(**Neural Networks: Learning**) 
 
@@ -202,7 +204,7 @@
 
 9.8 自主驾驶 
 
-- [第六周](html/week6.html)
+- [第六周](markdown/week6.md)
 
 十、应用机器学习的建议(**Advice for Applying Machine Learning**) 
 
@@ -232,7 +234,7 @@
 
 11.5 机器学习的数据 
 
-[第7周](html/week7.html)
+[第7周](markdown/week7.md)
 
 十二、支持向量机(**Support Vector Machines**) 
 
@@ -248,7 +250,7 @@
 
 12.6 使用支持向量机 
 
-- [第八周](html/week8.html)
+- [第八周](markdown/week8.md)
 
 十三、聚类(**Clustering**) 
 
@@ -278,7 +280,7 @@
 
 14.7 主成分分析法的应用建议 
 
-- [第九周](html/week9.html)
+- [第九周](markdown/week9.md)
 
 十五、异常检测(**Anomaly Detection**) 
 
@@ -312,7 +314,7 @@
 
 16.6 推行工作上的细节：均值归一化 
 
-- [第十周](html/week10.html)
+- [第十周](markdown/week10.md)
 
 十七、大规模机器学习(**Large Scale Machine Learning**) 
 
