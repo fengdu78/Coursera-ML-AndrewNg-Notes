@@ -506,7 +506,7 @@ $A{{A}^{-1}}={{A}^{-1}}A=I$
 
 例：
 
-${{\left| \begin{matrix}   a& b  \\   b& d  \\   e& f  \\\end{matrix} \right|}^{T}}=\left|\begin{matrix}   a& c & e  \\   b& d & f  \\\end{matrix} \right|$
+${{\left| \begin{matrix}   a& b  \\   c& d  \\   e& f  \\\end{matrix} \right|}^{T}}=\left|\begin{matrix}   a& c & e  \\   b& d & f  \\\end{matrix} \right|$
 
 矩阵的转置基本性质:
 
