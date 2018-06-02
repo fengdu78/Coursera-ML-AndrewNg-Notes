@@ -60,7 +60,7 @@
 
 [笔记在线阅读](http://www.ai-start.com/ml2014)
 
-[笔记pdf版本下载](https://github.com/fengdu78/Coursera-ML-AndrewNg-Notes/blob/master/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E5%AE%8C%E6%95%B4%E7%89%88v5.1-A4%E6%89%93%E5%8D%B0%E7%89%88.pdf)
+笔记pdf版本下载 ：见**github**根目录。
 
 机器学习qq群：774999266
 
