@@ -149,8 +149,8 @@ ${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
 
 ![](../images/10342b472803c339a9e3bc339188c5b8.png)
 
-其实神经网络就像是logistic regression，只不过我们把**logistic regression**中的输入向量$\left[ x_1\sim {x_3} \right]$ 变成了中间层的$\left[ a_1^{(2)}\sim a_3^{(2)} \right]$, 即:  $h_\theta(x)=g\left( \theta_0^{\left( 2 \right)}a_0^{\left( 2 \right)}+\theta_1^{\left( 2 \right)}a_1^{\left( 2 \right)}+\theta_{2}^{\left( 2 \right)}a_{2}^{\left( 2 \right)}+\theta_{3}^{\left( 2 \right)}a_{3}^{\left( 2 \right)} \right)$ 
-我们可以把$a_0, a_1, a_2, a_3$看成更为高级的特征值，也就是$x_0, x_1, x_2, x_3$的进化体，并且它们是由 $x$与决定的，因为是梯度下降的，所以$a$是变化的，并且变得越来越厉害，所以这些更高级的特征值远比仅仅将 $x$次方厉害，也能更好的预测新数据。
+其实神经网络就像是**logistic regression**，只不过我们把**logistic regression**中的输入向量$\left[ x_1\sim {x_3} \right]$ 变成了中间层的$\left[ a_1^{(2)}\sim a_3^{(2)} \right]$, 即:  $h_\theta(x)=g\left( \Theta_0^{\left( 2 \right)}a_0^{\left( 2 \right)}+\Theta_1^{\left( 2 \right)}a_1^{\left( 2 \right)}+\Theta_{2}^{\left( 2 \right)}a_{2}^{\left( 2 \right)}+\Theta_{3}^{\left( 2 \right)}a_{3}^{\left( 2 \right)} \right)$ 
+我们可以把$a_0, a_1, a_2, a_3$看成更为高级的特征值，也就是$x_0, x_1, x_2, x_3$的进化体，并且它们是由 $x$与$\theta$决定的，因为是梯度下降的，所以$a$是变化的，并且变得越来越厉害，所以这些更高级的特征值远比仅仅将 $x$次方厉害，也能更好的预测新数据。
 这就是神经网络相比于逻辑回归和线性回归的优势。
 
 
@@ -181,7 +181,7 @@ ${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
 
 所以我们有：$h_\Theta(x) \approx \text{x}_1 \text{AND} \, \text{x}_2$
 
-所以我们的：
+所以我们的：$h_\Theta(x) $
 
 这就是**AND**函数。
 
