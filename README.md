@@ -32,11 +32,11 @@
 
 参考：https://www.coursera.org/course/ml 机器学习公开课
 
-           https://mooc.guokr.com/note/12/ [小小人_V](https://mooc.guokr.com/user/2133483357/) 的个人笔记
+https://mooc.guokr.com/note/12/ [小小人_V](https://mooc.guokr.com/user/2133483357/) 的个人笔记
 
-           《统计学习方法》李航
-
-          《机器学习课》邹博
+《统计学习方法》李航
+    
+《机器学习课》邹博
 
 ## 备注：吴恩达老师的深度学习课（deepLearning.ai）的笔记地址：https://github.com/fengdu78/deeplearning_ai_books
 
