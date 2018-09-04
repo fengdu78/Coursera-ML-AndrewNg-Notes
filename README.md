@@ -26,7 +26,7 @@
 
 2018-3-26 夜
 
-**微信公众号：**机器学习初学者 ![gongzhong](images\gongzhong.png)
+**微信公众号：**机器学习初学者 ![gongzhong](/images/gongzhong.png)
 
 [我的知乎](https://www.zhihu.com/people/fengdu78/activities)
 
