@@ -44,12 +44,12 @@ $f'({{x}_{0}})=\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{f(x)-f({{x}_{0}}
 (3) $(\frac{u}{v}{)}'=\frac{v{u}'-u{v}'}{{{v}^{2}}}(v\ne 0)$       $d(\frac{u}{v})=\frac{vdu-udv}{{{v}^{2}}}$
 
 **6.基本导数与微分表**
-(1) $y=c$（常数）       ${y}'=0$          $dy=0$
-(2) $y={{x}^{\alpha }}$($\alpha $为实数)    ${y}'=\alpha {{x}^{\alpha -1}}$      $dy=\alpha {{x}^{\alpha -1}}dx$
-(3) $y={{a}^{x}}$      ${y}'={{a}^{x}}\ln a$         $dy={{a}^{x}}\ln adx$
-  特例:   $({{{e}}^{x}}{)}'={{{e}}^{x}}$             $d({{{e}}^{x}})={{{e}}^{x}}dx$
+(1) $y=c​$（常数）       ${y}'=0​$          $dy=0​$
+(2) $y={{x}^{\alpha }}​$($\alpha ​$为实数)    ${y}'=\alpha {{x}^{\alpha -1}}​$      $dy=\alpha {{x}^{\alpha -1}}dx​$
+(3) $y={{a}^{x}}​$      ${y}'={{a}^{x}}\ln a​$         $dy={{a}^{x}}\ln adx​$
+  特例:   $({{{e}}^{x}}{)}'={{{e}}^{x}}​$             $d({{{e}}^{x}})={{{e}}^{x}}dx​$
 
-(4) ${y}'=\frac{1}{x\ln a}$           
+(4) $y={{\log }_{a}}x$   ${y}'=\frac{1}{x\ln a}$           
 
 $dy=\frac{1}{x\ln a}dx$
   特例:$y=\ln x$                      $(\ln x{)}'=\frac{1}{x}$       $d(\ln x)=\frac{1}{x}dx$
