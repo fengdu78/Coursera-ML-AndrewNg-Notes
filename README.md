@@ -358,5 +358,5 @@ https://mooc.guokr.com/note/12/ [小小人_V](https://mooc.guokr.com/user/213348
 
 
 
-**机器学习qq群：654173748** 
+**机器学习爱好者qq群：774999266或者654173748** 
 
