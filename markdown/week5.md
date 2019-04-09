@@ -119,6 +119,12 @@ Theta1 = reshape(thetaVec(221:231, 1, 11);
 
 ![](../images/1542307ad9033e39093e7f28d0c7146c.png)
 
+**感悟**：上图中的 $\delta^{(l)}_{j}="error" \ of cost \  for \ a^{(l)}_{j} \ (unit \ j \ in \ layer \ l)$ 理解如下：
+
+$\delta^{(l)}_{j}$ 相当于是第 $l$ 层的第 $j$ 单元中得到的激活项的“误差”，即”正确“的 $a^{(l)}_{j}$ 与计算得到的 $a^{(l)}_{j}$ 的差。
+
+而 $a^{(l)}_{j}=g(z^{(l)})$ ，（g为sigmoid函数）。我们可以想象 $\delta^{(l)}_{j}$ 为函数求导时迈出的那一丁点微分，所以更准确的说 $\delta^{(l)}_{j}=\frac{\partial}{\partial z^{(l)}_{j}}cost(i)$
+
 ### 9.4 实现注意：展开参数
 
 参考视频: 9 - 4 - Implementation Note\_ Unrolling Parameters (8 min).mkv
