@@ -199,24 +199,24 @@ ${{z}^{\left( 2 \right)}}={{\Theta }^{\left( 1 \right)}}\times {{X}^{T}} $
 
 下图的神经元（三个权重分别为-30，20，20）可以被视为作用同于逻辑与（**AND**）：
 
-![](../images/57480b04956f1dc54ecfc64d68a6b357.jpg)
+![](../images/57480b04956f1dc54ecfc64d68a6b357.png)
 
 下图的神经元（三个权重分别为-10，20，20）可以被视为作用等同于逻辑或（**OR**）：
 
-![](../images/7527e61b1612dcf84dadbcf7a26a22fb.jpg)
+![](../images/7527e61b1612dcf84dadbcf7a26a22fb.png)
 
 下图的神经元（两个权重分别为 10，-20）可以被视为作用等同于逻辑非（**NOT**）：
 
-![](../images/1fd3017dfa554642a5e1805d6d2b1fa6.jpg)
+![](../images/1fd3017dfa554642a5e1805d6d2b1fa6.png)
 
-我们可以利用神经元来组合成更为复杂的神经网络以实现更复杂的运算。例如我们要实现**XNOR** 功能（输入的两个值必须一样，均为1或均为0），即 $\text{XNOR}=( \text{x}_1\, \text{AND}\, \text{x}_2 )\, \text{OR} \left( \left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right) \right)$
-首先构造一个能表达$\left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right)$部分的神经元：
+我们可以利用神经元来组合成更为复杂的神经网络以实现更复杂的运算。例如我们要实现**XNOR** 功能（输入的两个值必须一样，均为1或均为0），即 $\text{XNOR}=( \text{x}_1\, \text{AND}\, \text{x}_2 )\, \text{OR} \left( \left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right) \right)​$
+首先构造一个能表达$\left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right)​$部分的神经元：
 
-![](../images/4c44e69a12b48efdff2fe92a0a698768.jpg)
+![](../images/4c44e69a12b48efdff2fe92a0a698768.png)
 
-然后将表示 **AND** 的神经元和表示$\left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right)$的神经元以及表示 OR 的神经元进行组合：
+然后将表示 **AND** 的神经元和表示$\left( \text{NOT}\, \text{x}_1 \right) \text{AND} \left( \text{NOT}\, \text{x}_2 \right)​$的神经元以及表示 OR 的神经元进行组合：
 
-![](../images/432c906875baca78031bd337fe0c8682.jpg)
+![](../images/432c906875baca78031bd337fe0c8682.png)
 
 我们就得到了一个能实现 $\text{XNOR}$ 运算符功能的神经网络。
 
