@@ -49,6 +49,8 @@ $J(\Theta) = -\frac{1}{m} \left[ \sum\limits_{i=1}^{m} \sum\limits_{k=1}^{k} {y_
 
 ![](../images/2ea8f5ce4c3df931ee49cf8d987ef25d.png)
 
+下面的公式推导过程见：<https://blog.csdn.net/qq_29762941/article/details/80343185>
+
 我们从最后一层的误差开始计算，误差是激活单元的预测（${a^{(4)}}$）与实际值（$y^k$）之间的误差，（$k=1:k$）。
 我们用$\delta$来表示误差，则：$\delta^{(4)}=a^{(4)}-y$
 我们利用这个误差值来计算前一层的误差：$\delta^{(3)}=\left({\Theta^{(3)}}\right)^{T}\delta^{(4)}\ast g'\left(z^{(3)}\right)$
