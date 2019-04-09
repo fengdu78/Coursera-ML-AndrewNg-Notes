@@ -47,9 +47,7 @@ $J(\Theta) = -\frac{1}{m} \left[ \sum\limits_{i=1}^{m} \sum\limits_{k=1}^{k} {y_
 
 前向传播算法：
 
-![](../images/2ea8f5ce4c3df931ee49cf8d987ef25d.jpg)
-
-![](../images/6a0954ad41f959d7f272e8f53d4ee2de.jpg)
+![](../images/2ea8f5ce4c3df931ee49cf8d987ef25d.png)
 
 我们从最后一层的误差开始计算，误差是激活单元的预测（${a^{(4)}}$）与实际值（$y^k$）之间的误差，（$k=1:k$）。
 我们用$\delta$来表示误差，则：$\delta^{(4)}=a^{(4)}-y$
