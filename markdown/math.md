@@ -1,22 +1,18 @@
-
-机器学习的数学基础
-------------------
-
-[TOC]
-
 ### 高等数学
 
-**1.导数定义：**
+#### 1.导数定义：
 
 导数和微分的概念
 
-$f'({{x}_{0}})=\underset{\Delta x\to 0}{\mathop{\lim }}\,\frac{f({{x}_{0}}+\Delta x)-f({{x}_{0}})}{\Delta x}$    （1）
+$f'({{x}_{0}})=\underset{\Delta x\to 0}{\mathop{\lim }}\,\frac{f({{x}_{0}}+\Delta x)-f({{x}_{0}})}{\Delta x}$ （1）
 
 或者：
 
-$f'({{x}_{0}})=\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{f(x)-f({{x}_{0}})}{x-{{x}_{0}}}$           （2）
+$f'({{x}_{0}})=\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{f(x)-f({{x}_{0}})}{x-{{x}_{0}}}$ （2）
 
-**2.左右导数导数的几何意义和物理意义**
+
+
+#### 2.左右导数导数的几何意义和物理意义
 
 函数$f(x)$在$x_0$处的左、右导数分别定义为：
 
@@ -24,143 +20,194 @@ $f'({{x}_{0}})=\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{f(x)-f({{x}_{0}}
 
 右导数：${{{f}'}_{+}}({{x}_{0}})=\underset{\Delta x\to {{0}^{+}}}{\mathop{\lim }}\,\frac{f({{x}_{0}}+\Delta x)-f({{x}_{0}})}{\Delta x}=\underset{x\to x_{0}^{+}}{\mathop{\lim }}\,\frac{f(x)-f({{x}_{0}})}{x-{{x}_{0}}}$
 
-**3.函数的可导性与连续性之间的关系**
 
-**Th1:** 函数$f(x)$在$x_0$处可微$\Leftrightarrow f(x)$在$x_0$处可导
 
-**Th2:** 若函数在点$x_0$处可导，则$y=f(x)$在点$x_0$处连续，反之则不成立。即函数连续不一定可导。
+#### 3.函数的可导性与连续性之间的关系
 
-**Th3:** ${f}'({{x}_{0}})$存在$\Leftrightarrow {{{f}'}_{-}}({{x}_{0}})={{{f}'}_{+}}({{x}_{0}})$
+Th1: 函数$f(x)$在$x_0$处可微$\Leftrightarrow f(x)$在$x_0$处可导
 
-**4.平面曲线的切线和法线**
+Th2: 若函数在点$x_0$处可导，则$y=f(x)$在点$x_0$处连续，反之则不成立。即函数连续不一定可导。
+
+Th3: ${f}'({{x}_{0}})$存在$\Leftrightarrow {{{f}'}_{-}}({{x}_{0}})={{{f}'}_{+}}({{x}_{0}})$
+
+
+
+#### 4.平面曲线的切线和法线
 
 切线方程 : $y-{{y}_{0}}=f'({{x}_{0}})(x-{{x}_{0}})$
+
 法线方程：$y-{{y}_{0}}=-\frac{1}{f'({{x}_{0}})}(x-{{x}_{0}}),f'({{x}_{0}})\ne 0$
 
-**5.四则运算法则**
+
+
+#### 5.四则运算法则
+
 设函数$u=u(x)，v=v(x)$]在点$x$可导则
-(1) $(u\pm v{)}'={u}'\pm {v}'$       $d(u\pm v)=du\pm dv$
-(2)$(uv{)}'=u{v}'+v{u}'$        $d(uv)=udv+vdu$
-(3) $(\frac{u}{v}{)}'=\frac{v{u}'-u{v}'}{{{v}^{2}}}(v\ne 0)$       $d(\frac{u}{v})=\frac{vdu-udv}{{{v}^{2}}}$
 
-**6.基本导数与微分表**
-(1) $y=c​$（常数）       ${y}'=0​$          $dy=0​$
-(2) $y={{x}^{\alpha }}​$($\alpha ​$为实数)    ${y}'=\alpha {{x}^{\alpha -1}}​$      $dy=\alpha {{x}^{\alpha -1}}dx​$
-(3) $y={{a}^{x}}​$      ${y}'={{a}^{x}}\ln a​$         $dy={{a}^{x}}\ln adx​$
-  特例:   $({{{e}}^{x}}{)}'={{{e}}^{x}}​$             $d({{{e}}^{x}})={{{e}}^{x}}dx​$
+(1) $(u\pm v{)}'={u}'\pm {v}'$ $d(u\pm v)=du\pm dv$
 
-(4) $y={{\log }_{a}}x$   ${y}'=\frac{1}{x\ln a}$           
+(2)$(uv{)}'=u{v}'+v{u}'$ $d(uv)=udv+vdu$
+
+(3) $(\frac{u}{v}{)}'=\frac{v{u}'-u{v}'}{{{v}^{2}}}(v\ne 0)$ $d(\frac{u}{v})=\frac{vdu-udv}{{{v}^{2}}}$
+
+
+
+#### 6.基本导数与微分表
+
+(1) $y=c$（常数） ${y}'=0$ $dy=0$
+
+(2) $y={{x}^{\alpha }}$($\alpha $为实数) ${y}'=\alpha {{x}^{\alpha -1}}$ $dy=\alpha {{x}^{\alpha -1}}dx$
+
+(3) $y={{a}^{x}}$ ${y}'={{a}^{x}}\ln a$ $dy={{a}^{x}}\ln adx$
+特例: $({{{e}}^{x}}{)}'={{{e}}^{x}}$ $d({{{e}}^{x}})={{{e}}^{x}}dx$
+
+(4) $y={{\log }_{a}}x$ ${y}'=\frac{1}{x\ln a}$
 
 $dy=\frac{1}{x\ln a}dx$
-  特例:$y=\ln x$                      $(\ln x{)}'=\frac{1}{x}$       $d(\ln x)=\frac{1}{x}dx$
+特例:$y=\ln x$ $(\ln x{)}'=\frac{1}{x}$ $d(\ln x)=\frac{1}{x}dx$
 
-(5) $y=\sin x$         
+(5) $y=\sin x$
 
-${y}'=\cos x$        $d(\sin x)=\cos xdx$
+${y}'=\cos x$ $d(\sin x)=\cos xdx$
 
-(6) $y=\cos x$      
+(6) $y=\cos x$
 
-${y}'=-\sin x$       $d(\cos x)=-\sin xdx$
+${y}'=-\sin x$ $d(\cos x)=-\sin xdx$
 
-(7) $y=\tan x$  
+(7) $y=\tan x$
 
-${y}'=\frac{1}{{{\cos }^{2}}x}={{\sec }^{2}}x$  $d(\tan x)={{\sec }^{2}}xdx$
-(8) $y=\cot x$ ${y}'=-\frac{1}{{{\sin }^{2}}x}=-{{\csc }^{2}}x$  $d(\cot x)=-{{\csc }^{2}}xdx$
-(9) $y=\sec x$ ${y}'=\sec x\tan x$     
+${y}'=\frac{1}{{{\cos }^{2}}x}={{\sec }^{2}}x$ $d(\tan x)={{\sec }^{2}}xdx$
 
- $d(\sec x)=\sec x\tan xdx$
-(10) $y=\csc x$ ${y}'=-\csc x\cot x$    
+(8) $y=\cot x$ ${y}'=-\frac{1}{{{\sin }^{2}}x}=-{{\csc }^{2}}x$ $d(\cot x)=-{{\csc }^{2}}xdx$
+
+(9) $y=\sec x$ ${y}'=\sec x\tan x$
+
+$d(\sec x)=\sec x\tan xdx$
+(10) $y=\csc x$ ${y}'=-\csc x\cot x$
 
 $d(\csc x)=-\csc x\cot xdx$
-(11) $y=\arcsin x$  
+(11) $y=\arcsin x$
 
-${y}'=\frac{1}{\sqrt{1-{{x}^{2}}}}$   
+${y}'=\frac{1}{\sqrt{1-{{x}^{2}}}}$
 
 $d(\arcsin x)=\frac{1}{\sqrt{1-{{x}^{2}}}}dx$
-(12) $y=\arccos x$ 
+(12) $y=\arccos x$
 
-${y}'=-\frac{1}{\sqrt{1-{{x}^{2}}}}$     $d(\arccos x)=-\frac{1}{\sqrt{1-{{x}^{2}}}}dx$
+${y}'=-\frac{1}{\sqrt{1-{{x}^{2}}}}$ $d(\arccos x)=-\frac{1}{\sqrt{1-{{x}^{2}}}}dx$
 
-(13) $y=\arctan x$ 
+(13) $y=\arctan x$
 
-${y}'=\frac{1}{1+{{x}^{2}}}$     $d(\arctan x)=\frac{1}{1+{{x}^{2}}}dx$
+${y}'=\frac{1}{1+{{x}^{2}}}$ $d(\arctan x)=\frac{1}{1+{{x}^{2}}}dx$
 
-(14) $y=\operatorname{arc}\cot x$      
+(14) $y=\operatorname{arc}\cot x$
 
-${y}'=-\frac{1}{1+{{x}^{2}}}$   
+${y}'=-\frac{1}{1+{{x}^{2}}}$
 
 $d(\operatorname{arc}\cot x)=-\frac{1}{1+{{x}^{2}}}dx$
-(15) $y=shx$    
+(15) $y=shx$
 
-${y}'=chx$       $d(shx)=chxdx$
+${y}'=chx$ $d(shx)=chxdx$
 
-(16) $y=chx$    
+(16) $y=chx$
 
-${y}'=shx$       $d(chx)=shxdx$
+${y}'=shx$ $d(chx)=shxdx$
 
-**7.复合函数，反函数，隐函数以及参数方程所确定的函数的微分法**
+
+
+#### 7.复合函数，反函数，隐函数以及参数方程所确定的函数的微分法
 
 (1) 反函数的运算法则: 设$y=f(x)$在点$x$的某邻域内单调连续，在点$x$处可导且${f}'(x)\ne 0$，则其反函数在点$x$所对应的$y$处可导，并且有$\frac{dy}{dx}=\frac{1}{\frac{dx}{dy}}$
+
 (2) 复合函数的运算法则:若$\mu =\varphi (x)$在点$x$可导,而$y=f(\mu )$在对应点$\mu $($\mu =\varphi (x)$)可导,则复合函数$y=f(\varphi (x))$在点$x$可导,且${y}'={f}'(\mu )\cdot {\varphi }'(x)$
+
 (3) 隐函数导数$\frac{dy}{dx}$的求法一般有三种方法：
+
 1)方程两边对$x$求导，要记住$y$是$x$的函数，则$y$的函数是$x$的复合函数.例如$\frac{1}{y}$，${{y}^{2}}$，$ln y$，${{{e}}^{y}}$等均是$x$的复合函数.
 对$x$求导应按复合函数连锁法则做.
+
 2)公式法.由$F(x,y)=0$知 $\frac{dy}{dx}=-\frac{{{{{F}'}}_{x}}(x,y)}{{{{{F}'}}_{y}}(x,y)}$,其中，${{{F}'}_{x}}(x,y)$，
 ${{{F}'}_{y}}(x,y)$分别表示$F(x,y)$对$x$和$y$的偏导数
+
 3)利用微分形式不变性
 
-**8.常用高阶导数公式**
+
+
+#### 8.常用高阶导数公式
 
 （1）$({{a}^{x}}){{\,}^{(n)}}={{a}^{x}}{{\ln }^{n}}a\quad (a>{0})\quad \quad ({{{e}}^{x}}){{\,}^{(n)}}={e}{{\,}^{x}}$
+
 （2）$(\sin kx{)}{{\,}^{(n)}}={{k}^{n}}\sin (kx+n\cdot \frac{\pi }{{2}})$
+
 （3）$(\cos kx{)}{{\,}^{(n)}}={{k}^{n}}\cos (kx+n\cdot \frac{\pi }{{2}})$
+
 （4）$({{x}^{m}}){{\,}^{(n)}}=m(m-1)\cdots (m-n+1){{x}^{m-n}}$
+
 （5）$(\ln x){{\,}^{(n)}}={{(-{1})}^{(n-{1})}}\frac{(n-{1})!}{{{x}^{n}}}$
+
 （6）莱布尼兹公式：若$u(x)\,,v(x)$均$n$阶可导，则
- ${{(uv)}^{(n)}}=\sum\limits_{i={0}}^{n}{c_{n}^{i}{{u}^{(i)}}{{v}^{(n-i)}}}$，其中${{u}^{({0})}}=u$，${{v}^{({0})}}=v$
+${{(uv)}^{(n)}}=\sum\limits_{i={0}}^{n}{c_{n}^{i}{{u}^{(i)}}{{v}^{(n-i)}}}$，其中${{u}^{({0})}}=u$，${{v}^{({0})}}=v$
 
-**9.微分中值定理，泰勒公式**
 
-**Th1:**(费马定理)
+
+#### 9.微分中值定理，泰勒公式
+
+**Th1:(费马定理)**
 
 若函数$f(x)$满足条件：
+
 (1)函数$f(x)$在${{x}_{0}}$的某邻域内有定义，并且在此邻域内恒有
 $f(x)\le f({{x}_{0}})$或$f(x)\ge f({{x}_{0}})$,
 
 (2) $f(x)$在${{x}_{0}}$处可导,则有 ${f}'({{x}_{0}})=0$
 
-**Th2:**(罗尔定理) 
+
+
+**Th2:(罗尔定理)**
 
 设函数$f(x)$满足条件：
+
 (1)在闭区间$[a,b]$上连续；
 
 (2)在$(a,b)$内可导；
 
 (3)$f(a)=f(b)$；
 
-则在$(a,b)$内一存在个$\xi $，使  ${f}'(\xi )=0$
-**Th3:** (拉格朗日中值定理) 
+则在$(a,b)$内一存在个$\xi $，使 ${f}'(\xi )=0$
+
+
+
+**Th3: (拉格朗日中值定理)**
 
 设函数$f(x)$满足条件：
+
 (1)在$[a,b]$上连续；
 
 (2)在$(a,b)$内可导；
 
-则在$(a,b)$内一存在个$\xi $，使  $\frac{f(b)-f(a)}{b-a}={f}'(\xi )$
+则在$(a,b)$内一存在个$\xi $，使 $\frac{f(b)-f(a)}{b-a}={f}'(\xi )$
 
-**Th4:** (柯西中值定理)
 
- 设函数$f(x)$，$g(x)$满足条件：
+
+**Th4: (柯西中值定理)**
+
+设函数$f(x)$，$g(x)$满足条件：
 (1) 在$[a,b]$上连续；
 
 (2) 在$(a,b)$内可导且${f}'(x)$，${g}'(x)$均存在，且${g}'(x)\ne 0$
 
-则在$(a,b)$内存在一个$\xi $，使  $\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{{f}'(\xi )}{{g}'(\xi )}$
+则在$(a,b)$内存在一个$\xi $，使 $\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{{f}'(\xi )}{{g}'(\xi )}$
 
-**10.洛必达法则**
-法则Ⅰ ($\frac{0}{0}$型)
-设函数$f\left( x \right),g\left( x \right)$满足条件：
- $\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,f\left( x \right)=0,\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,g\left( x \right)=0$; 
+
+
+#### 10.洛必达法则
+
+**法则 Ⅰ ($\frac{0}{0}$型)**
+
+设函数$f\left( x \right),g\left( x \right)$
+
+满足条件：
+
+$\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,f\left( x \right)=0,\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,g\left( x \right)=0$;
 
 $f\left( x \right),g\left( x \right)$在${{x}_{0}}$的邻域内可导，(在${{x}_{0}}$处可除外)且${g}'\left( x \right)\ne 0$;
 
@@ -168,106 +215,172 @@ $\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{{f}'\left( x \right)}{{g}'\lef
 
 则:
 $\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{f\left( x \right)}{g\left( x \right)}=\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{{f}'\left( x \right)}{{g}'\left( x \right)}$。
-法则${{I}'}$ ($\frac{0}{0}$型)设函数$f\left( x \right),g\left( x \right)$满足条件：
-$\underset{x\to \infty }{\mathop{\lim }}\,f\left( x \right)=0,\underset{x\to \infty }{\mathop{\lim }}\,g\left( x \right)=0$;
+法则${{I}'}$ ($\frac{0}{0}$型)
 
-存在一个$X>0$,当$\left| x \right|>X$时,$f\left( x \right),g\left( x \right)$可导,且${g}'\left( x \right)\ne 0$;$\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{{f}'\left( x \right)}{{g}'\left( x \right)}$存在(或$\infty $)。
+设函数$f\left( x \right),g\left( x \right)$
+
+满足条件：
+
+$\underset{x\to \infty }{\mathop{\lim }}\,f\left(x \right)=0,\underset{x \to \infty}{\mathop{\lim}}\,g\left(x \right)=0$;
+
+存在一个$X>0$,当$\left| x \right|>X$时,$f\left( x \right),g\left( x \right)$可导,且${g}'\left( x \right)\ne 0$;$\underset{x\to {{x}_{0}}}{\mathop{\lim}}\,\frac{{f}'\left(x \right)}{{g}'\left(x \right)}$存在(或$\infty $)。
 
 则:
 $\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{f\left( x \right)}{g\left( x \right)}=\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{{f}'\left( x \right)}{{g}'\left( x \right)}$
-法则Ⅱ($\frac{\infty }{\infty }$型) 设函数$f\left( x \right),g\left( x \right)$满足条件：
-$\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,f\left( x \right)=\infty ,\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,g\left( x \right)=\infty $;   $f\left( x \right),g\left( x \right)$在${{x}_{0}}$ 的邻域内可导(在${{x}_{0}}$处可除外)且${g}'\left( x \right)\ne 0$;$\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{{f}'\left( x \right)}{{g}'\left( x \right)}$存在(或$\infty $)。则
-$\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{f\left( x \right)}{g\left( x \right)}=\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{{f}'\left( x \right)}{{g}'\left( x \right)}.$同理法则${I{I}'}$($\frac{\infty }{\infty }$型)仿法则${{I}'}$可写出。
 
-**11.泰勒公式**
+
+
+**法则 Ⅱ($\frac{\infty }{\infty }$型)**
+
+设函数$f\left( x \right),g\left( x \right)$满足条件：
+$\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,f\left( x \right)=\infty ,\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,g\left( x \right)=\infty$;
+
+$f\left( x \right),g\left( x \right)$在${{x}_{0}}$ 的邻域内可导(在${{x}_{0}}$处可除外)且${g}'\left( x \right)\ne 0$;$\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{{f}'\left( x \right)}{{g}'\left( x \right)}$存在(或$\infty$)。
+
+则
+
+$\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{f\left( x \right)}{g\left( x \right)}=\underset{x\to {{x}_{0}}}{\mathop{\lim }}\,\frac{{f}'\left( x \right)}{{g}'\left( x \right)}.$
+
+同理法则${I{I}'}$($\frac{\infty }{\infty }$型)仿法则${{I}'}$可写出。
+
+
+
+#### 11.泰勒公式
 
 设函数$f(x)$在点${{x}_{0}}$处的某邻域内具有$n+1$阶导数，则对该邻域内异于${{x}_{0}}$的任意点$x$，在${{x}_{0}}$与$x$之间至少存在
-一个$\xi $，使得：
-$f(x)=f({{x}_{0}})+{f}'({{x}_{0}})(x-{{x}_{0}})+\frac{1}{2!}{f}''({{x}_{0}}){{(x-{{x}_{0}})}^{2}}+\cdots $ 
+一个$\xi$，使得：
+
+$f(x)=f({{x}_{0}})+{f}'({{x}_{0}})(x-{{x}_{0}})+\frac{1}{2!}{f}''({{x}_{0}}){{(x-{{x}_{0}})}^{2}}+\cdots$
+
 $+\frac{{{f}^{(n)}}({{x}_{0}})}{n!}{{(x-{{x}_{0}})}^{n}}+{{R}_{n}}(x)$
- 其中 ${{R}_{n}}(x)=\frac{{{f}^{(n+1)}}(\xi )}{(n+1)!}{{(x-{{x}_{0}})}^{n+1}}$称为$f(x)$在点${{x}_{0}}$处的$n$阶泰勒余项。
+
+其中 ${{R}_{n}}(x)=\frac{{{f}^{(n+1)}}(\xi )}{(n+1)!}{{(x-{{x}_{0}})}^{n+1}}$称为$f(x)$在点${{x}_{0}}$处的$n$阶泰勒余项。
 
 令${{x}_{0}}=0$，则$n$阶泰勒公式
 $f(x)=f(0)+{f}'(0)x+\frac{1}{2!}{f}''(0){{x}^{2}}+\cdots +\frac{{{f}^{(n)}}(0)}{n!}{{x}^{n}}+{{R}_{n}}(x)$……(1)
-其中 ${{R}_{n}}(x)=\frac{{{f}^{(n+1)}}(\xi )}{(n+1)!}{{x}^{n+1}}$，$\xi $在0与$x$之间.(1)式称为麦克劳林公式
 
-**常用五种函数在${{x}_{0}}=0$处的泰勒公式**
+其中 ${{R}_{n}}(x)=\frac{{{f}^{(n+1)}}(\xi )}{(n+1)!}{{x}^{n+1}}$，$\xi $在 0 与$x$之间.(1)式称为**麦克劳林公式**
 
-(1) ${{{e}}^{x}}=1+x+\frac{1}{2!}{{x}^{2}}+\cdots +\frac{1}{n!}{{x}^{n}}+\frac{{{x}^{n+1}}}{(n+1)!}{{e}^{\xi }}$ 
+
+
+常用五种函数在${{x}_{0}}=0$处的泰勒公式
+
+(1) ${{{e}}^{x}}=1+x+\frac{1}{2!}{{x}^{2}}+\cdots +\frac{1}{n!}{{x}^{n}}+\frac{{{x}^{n+1}}}{(n+1)!}{{e}^{\xi }}$
 
 或 $=1+x+\frac{1}{2!}{{x}^{2}}+\cdots +\frac{1}{n!}{{x}^{n}}+o({{x}^{n}})$
 
+
+
 (2) $\sin x=x-\frac{1}{3!}{{x}^{3}}+\cdots +\frac{{{x}^{n}}}{n!}\sin \frac{n\pi }{2}+\frac{{{x}^{n+1}}}{(n+1)!}\sin (\xi +\frac{n+1}{2}\pi )$
 
-或  $=x-\frac{1}{3!}{{x}^{3}}+\cdots +\frac{{{x}^{n}}}{n!}\sin \frac{n\pi }{2}+o({{x}^{n}})$
+或 $=x-\frac{1}{3!}{{x}^{3}}+\cdots +\frac{{{x}^{n}}}{n!}\sin \frac{n\pi }{2}+o({{x}^{n}})$
+
+
 
 (3) $\cos x=1-\frac{1}{2!}{{x}^{2}}+\cdots +\frac{{{x}^{n}}}{n!}\cos \frac{n\pi }{2}+\frac{{{x}^{n+1}}}{(n+1)!}\cos (\xi +\frac{n+1}{2}\pi )$
 
-或   $=1-\frac{1}{2!}{{x}^{2}}+\cdots +\frac{{{x}^{n}}}{n!}\cos \frac{n\pi }{2}+o({{x}^{n}})$
+或 $=1-\frac{1}{2!}{{x}^{2}}+\cdots +\frac{{{x}^{n}}}{n!}\cos \frac{n\pi }{2}+o({{x}^{n}})$
+
+
 
 (4) $\ln (1+x)=x-\frac{1}{2}{{x}^{2}}+\frac{1}{3}{{x}^{3}}-\cdots +{{(-1)}^{n-1}}\frac{{{x}^{n}}}{n}+\frac{{{(-1)}^{n}}{{x}^{n+1}}}{(n+1){{(1+\xi )}^{n+1}}}$
 
-或      $=x-\frac{1}{2}{{x}^{2}}+\frac{1}{3}{{x}^{3}}-\cdots +{{(-1)}^{n-1}}\frac{{{x}^{n}}}{n}+o({{x}^{n}})$
+或 $=x-\frac{1}{2}{{x}^{2}}+\frac{1}{3}{{x}^{3}}-\cdots +{{(-1)}^{n-1}}\frac{{{x}^{n}}}{n}+o({{x}^{n}})$
 
-(5) ${{(1+x)}^{m}}=1+mx+\frac{m(m-1)}{2!}{{x}^{2}}+\cdots +\frac{m(m-1)\cdots (m-n+1)}{n!}{{x}^{n}}$ 
-$+\frac{m(m-1)\cdots (m-n+1)}{(n+1)!}{{x}^{n+1}}{{(1+\xi )}^{m-n-1}}$ 
 
-或 ${{(1+x)}^{m}}=1+mx+\frac{m(m-1)}{2!}{{x}^{2}}+\cdots $ $+\frac{m(m-1)\cdots (m-n+1)}{n!}{{x}^{n}}+o({{x}^{n}})$
 
-**12.函数单调性的判断**
-**Th1:**  设函数$f(x)$在$(a,b)$区间内可导，如果对$\forall x\in (a,b)$，都有$f\,'(x)>0$（或$f\,'(x)<0$），则函数$f(x)$在$(a,b)$内是单调增加的（或单调减少）
+(5) ${{(1+x)}^{m}}=1+mx+\frac{m(m-1)}{2!}{{x}^{2}}+\cdots +\frac{m(m-1)\cdots (m-n+1)}{n!}{{x}^{n}}$
+$+\frac{m(m-1)\cdots (m-n+1)}{(n+1)!}{{x}^{n+1}}{{(1+\xi )}^{m-n-1}}$
 
-**Th2:** （取极值的必要条件）设函数$f(x)$在${{x}_{0}}$处可导，且在${{x}_{0}}$处取极值，则$f\,'({{x}_{0}})=0$。
+或 ${{(1+x)}^{m}}=1+mx+\frac{m(m-1)}{2!}{{x}^{2}}+\cdots$ $+\frac{m(m-1)\cdots(m-n+1)}{n!}{{x}^{n}}+o({{x}^{n}})$
 
-**Th3:** （取极值的第一充分条件）设函数$f(x)$在${{x}_{0}}$的某一邻域内可微，且$f\,'({{x}_{0}})=0$（或$f(x)$在${{x}_{0}}$处连续，但$f\,'({{x}_{0}})$不存在。）
+
+
+#### 12.函数单调性的判断
+
+**Th1:** 
+
+设函数$f(x)$在$(a,b)$区间内可导，如果对$\forall x\in (a,b)$，都有$f\,'(x)>0$（或$f\,'(x)<0$），则函数$f(x)$在$(a,b)$内是单调增加的（或单调减少）
+
+
+
+**Th2:** 
+
+（取极值的必要条件）设函数$f(x)$在${{x}_{0}}$处可导，且在${{x}_{0}}$处取极值，则$f\,'({{x}_{0}})=0$。
+
+
+
+**Th3:** 
+
+（取极值的第一充分条件）设函数$f(x)$在${{x}_{0}}$的某一邻域内可微，且$f\,'({{x}_{0}})=0$（或$f(x)$在${{x}_{0}}$处连续，但$f\,'({{x}_{0}})$不存在。）
+
 (1)若当$x$经过${{x}_{0}}$时，$f\,'(x)$由“+”变“-”，则$f({{x}_{0}})$为极大值；
-(2)若当$x​$经过${{x}_{0}}​$时，$f\,'(x)$由“-”变“+”，则$f({{x}_{0}})$为极小值；
+
+(2)若当$x$经过${{x}_{0}}$时，$f\,'(x)$由“-”变“+”，则$f({{x}_{0}})$为极小值；
+
 (3)若$f\,'(x)$经过$x={{x}_{0}}$的两侧不变号，则$f({{x}_{0}})$不是极值。
 
-**Th4:** (取极值的第二充分条件)设$f(x)$在点${{x}_{0}}$处有$f''(x)\ne 0$，且$f\,'({{x}_{0}})=0$，则 当$f'\,'({{x}_{0}})<0$时，$f({{x}_{0}})$为极大值；
+
+
+**Th4:** 
+
+(取极值的第二充分条件)设$f(x)$在点${{x}_{0}}$处有$f''(x)\ne 0$，且$f\,'({{x}_{0}})=0$，则 当$f'\,'({{x}_{0}})<0$时，$f({{x}_{0}})$为极大值；
 当$f'\,'({{x}_{0}})>0$时，$f({{x}_{0}})$为极小值。
 注：如果$f'\,'({{x}_{0}})<0$，此方法失效。
 
-**13.渐近线的求法**
-(1)水平渐近线   若$\underset{x\to +\infty }{\mathop{\lim }}\,f(x)=b$，或$\underset{x\to -\infty }{\mathop{\lim }}\,f(x)=b$，则
+
+
+#### 13.渐近线的求法
+
+(1)水平渐近线 若$\underset{x\to +\infty }{\mathop{\lim }}\,f(x)=b$，或$\underset{x\to -\infty }{\mathop{\lim }}\,f(x)=b$，则
 
 $y=b$称为函数$y=f(x)$的水平渐近线。
 
-(2)铅直渐近线   若$\underset{x\to x_{0}^{-}}{\mathop{\lim }}\,f(x)=\infty $，或$\underset{x\to x_{0}^{+}}{\mathop{\lim }}\,f(x)=\infty $，则
+(2)铅直渐近线 若$\underset{x\to x_{0}^{-}}{\mathop{\lim }}\,f(x)=\infty $，或$\underset{x\to x_{0}^{+}}{\mathop{\lim }}\,f(x)=\infty $，则
 
 $x={{x}_{0}}$称为$y=f(x)$的铅直渐近线。
 
-(3)斜渐近线   若$a=\underset{x\to \infty }{\mathop{\lim }}\,\frac{f(x)}{x},\quad b=\underset{x\to \infty }{\mathop{\lim }}\,[f(x)-ax]$，则
+(3)斜渐近线 若$a=\underset{x\to \infty }{\mathop{\lim }}\,\frac{f(x)}{x},\quad b=\underset{x\to \infty }{\mathop{\lim }}\,[f(x)-ax]$，则
 $y=ax+b$称为$y=f(x)$的斜渐近线。
 
-**14.函数凹凸性的判断**
-**Th1:** (凹凸性的判别定理）若在I上$f''(x)<0$（或$f''(x)>0$），则$f(x)$在I上是凸的（或凹的）。
 
-**Th2:** (拐点的判别定理1)若在${{x}_{0}}$处$f''(x)=0$，（或$f''(x)$不存在），当$x$变动经过${{x}_{0}}$时，$f''(x)$变号，则$({{x}_{0}},f({{x}_{0}}))$为拐点。
 
-**Th3:** (拐点的判别定理2)设$f(x)$在${{x}_{0}}$点的某邻域内有三阶导数，且$f''(x)=0$，$f'''(x)\ne 0$，则$({{x}_{0}},f({{x}_{0}}))$为拐点。
+#### 14.函数凹凸性的判断
 
-**15.弧微分**
+**Th1:** (凹凸性的判别定理）若在 I 上$f''(x)<0$（或$f''(x)>0$），则$f(x)$在 I 上是凸的（或凹的）。
+
+**Th2:** (拐点的判别定理 1)若在${{x}_{0}}$处$f''(x)=0$，（或$f''(x)$不存在），当$x$变动经过${{x}_{0}}$时，$f''(x)$变号，则$({{x}_{0}},f({{x}_{0}}))$为拐点。
+
+**Th3:** (拐点的判别定理 2)设$f(x)$在${{x}_{0}}$点的某邻域内有三阶导数，且$f''(x)=0$，$f'''(x)\ne 0$，则$({{x}_{0}},f({{x}_{0}}))$为拐点。
+
+
+
+#### 15.弧微分
 
 $dS=\sqrt{1+y{{'}^{2}}}dx$
 
-**16.曲率**
+
+
+#### 16.曲率
 
 曲线$y=f(x)$在点$(x,y)$处的曲率$k=\frac{\left| y'' \right|}{{{(1+y{{'}^{2}})}^{\tfrac{3}{2}}}}$。
 对于参数方程$\left\{ \begin{align}  & x=\varphi (t) \\  & y=\psi (t) \\ \end{align} \right.,$$k=\frac{\left| \varphi '(t)\psi ''(t)-\varphi ''(t)\psi '(t) \right|}{{{[\varphi {{'}^{2}}(t)+\psi {{'}^{2}}(t)]}^{\tfrac{3}{2}}}}$。
 
-**17.曲率半径**
+
+
+#### 17.曲率半径
 
 曲线在点$M$处的曲率$k(k\ne 0)$与曲线在点$M$处的曲率半径$\rho $有如下关系：$\rho =\frac{1}{k}$。
 
+
+
 ### 线性代数
 
-#### 行列式
+####  行列式
 
 **1.行列式按行（列）展开定理**
 
 (1) 设$A = ( a_{{ij}} )_{n \times n}$，则：$a_{i1}A_{j1} +a_{i2}A_{j2} + \cdots + a_{{in}}A_{{jn}} = \begin{cases}|A|,i=j\\ 0,i \neq j\end{cases}$
-
 
 或$a_{1i}A_{1j} + a_{2i}A_{2j} + \cdots + a_{{ni}}A_{{nj}} = \begin{cases}|A|,i=j\\ 0,i \neq j\end{cases}$即 $AA^{*} = A^{*}A = \left| A \right|E,$其中：$A^{*} = \begin{pmatrix} A_{11} & A_{12} & \ldots & A_{1n} \\ A_{21} & A_{22} & \ldots & A_{2n} \\ \ldots & \ldots & \ldots & \ldots \\ A_{n1} & A_{n2} & \ldots & A_{{nn}} \\ \end{pmatrix} = (A_{{ji}}) = {(A_{{ij}})}^{T}$
 
@@ -287,7 +400,7 @@ $n \geq 2$
 (6) 范德蒙行列式$D_{n} = \begin{vmatrix} 1 & 1 & \ldots & 1 \\ x_{1} & x_{2} & \ldots & x_{n} \\ \ldots & \ldots & \ldots & \ldots \\ x_{1}^{n - 1} & x_{2}^{n 1} & \ldots & x_{n}^{n - 1} \\ \end{vmatrix} =  \prod_{1 \leq j < i \leq n}^{}\,(x_{i} - x_{j})$
 
 设$A$是$n$阶方阵，$\lambda_{i}(i = 1,2\cdots,n)$是$A$的$n$个特征值，则
-$|A| = \prod_{i = 1}^{n}\lambda_{i}​$
+$|A| = \prod_{i = 1}^{n}\lambda_{i}$
 
 #### 矩阵
 
@@ -329,7 +442,7 @@ $|A| = \prod_{i = 1}^{n}\lambda_{i}​$
 
 (3) 若$A$可逆，则$A^{*} = |A|A^{- 1},{(A^{*})}^{*} = \frac{1}{|A|}A$
 
-(4) 若$A​$为$n​$阶方阵，则：
+(4) 若$A$为$n$阶方阵，则：
 
 $r(A^*)=\begin{cases}n,\quad r(A)=n\\ 1,\quad r(A)=n-1\\ 0,\quad r(A)<n-1\end{cases}$
 
@@ -433,7 +546,7 @@ $Y = \left( y_{1},y_{2},\cdots,y_{n} \right)^{T}$ 即： $\gamma =x_{1}\alpha_{1
 
 $(\alpha,\beta) = a_{1}b_{1} + a_{2}b_{2} + \cdots + a_{n}b_{n} = \alpha^{T}\beta = \beta^{T}\alpha$
 
-**8.Schmidt正交化**
+**8.Schmidt 正交化**
 
 若$\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$线性无关，则可构造$\beta_{1},\beta_{2},\cdots,\beta_{s}$使其两两正交，且$\beta_{i}$仅是$\alpha_{1},\alpha_{2},\cdots,\alpha_{i}$的线性组合$(i= 1,2,\cdots,n)$，再把$\beta_{i}$单位化，记$\gamma_{i} =\frac{\beta_{i}}{\left| \beta_{i}\right|}$，则$\gamma_{1},\gamma_{2},\cdots,\gamma_{i}$是规范正交向量组。其中
 $\beta_{1} = \alpha_{1}$， $\beta_{2} = \alpha_{2} -\frac{(\alpha_{2},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1}$ ， $\beta_{3} =\alpha_{3} - \frac{(\alpha_{3},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1} -\frac{(\alpha_{3},\beta_{2})}{(\beta_{2},\beta_{2})}\beta_{2}$ ，
@@ -468,12 +581,12 @@ $\beta_{s} = \alpha_{s} - \frac{(\alpha_{s},\beta_{1})}{(\beta_{1},\beta_{1})}\b
 
 (2) $\eta_{1},\eta_{2},\cdots,\eta_{t}$是${Ax} = 0$的基础解系，即：
 
-1) $\eta_{1},\eta_{2},\cdots,\eta_{t}$是${Ax} = 0$的解；
+1. $\eta_{1},\eta_{2},\cdots,\eta_{t}$是${Ax} = 0$的解；
 
-2) $\eta_{1},\eta_{2},\cdots,\eta_{t}$线性无关；
+2. $\eta_{1},\eta_{2},\cdots,\eta_{t}$线性无关；
 
-3) ${Ax} = 0$的任一解都可以由$\eta_{1},\eta_{2},\cdots,\eta_{t}$线性表出.
-$k_{1}\eta_{1} + k_{2}\eta_{2} + \cdots + k_{t}\eta_{t}$是${Ax} = 0$的通解，其中$k_{1},k_{2},\cdots,k_{t}$是任意常数。
+3. ${Ax} = 0$的任一解都可以由$\eta_{1},\eta_{2},\cdots,\eta_{t}$线性表出.
+   $k_{1}\eta_{1} + k_{2}\eta_{2} + \cdots + k_{t}\eta_{t}$是${Ax} = 0$的通解，其中$k_{1},k_{2},\cdots,k_{t}$是任意常数。
 
 #### 矩阵的特征值和特征向量
 
@@ -494,11 +607,11 @@ ${kλ},{aλ} + b,\lambda^{2},\lambda^{m},f(\lambda),\lambda,\lambda^{- 1},\frac{
 
 (1) 若$A \sim B$，则
 
-1) $A^{T} \sim B^{T},A^{- 1} \sim B^{- 1},,A^{*} \sim B^{*}$
+1. $A^{T} \sim B^{T},A^{- 1} \sim B^{- 1},,A^{*} \sim B^{*}$
 
-2) $|A| = |B|,\sum_{i = 1}^{n}A_{{ii}} = \sum_{i =1}^{n}b_{{ii}},r(A) = r(B)$
+2. $|A| = |B|,\sum_{i = 1}^{n}A_{{ii}} = \sum_{i =1}^{n}b_{{ii}},r(A) = r(B)$
 
-3) $|\lambda E - A| = |\lambda E - B|$，对$\forall\lambda$成立
+3. $|\lambda E - A| = |\lambda E - B|$，对$\forall\lambda$成立
 
 **3.矩阵可相似对角化的充分必要条件**
 
@@ -508,11 +621,11 @@ ${kλ},{aλ} + b,\lambda^{2},\lambda^{m},f(\lambda),\lambda,\lambda^{- 1},\frac{
 
 (3) 重要结论
 
-1) 若$A \sim B,C \sim D​$，则$\begin{bmatrix}  A & O \\ O & C \\\end{bmatrix} \sim \begin{bmatrix} B & O \\  O & D \\\end{bmatrix}​$.
+1. 若$A \sim B,C \sim D$，则$\begin{bmatrix}  A & O \\ O & C \\\end{bmatrix} \sim \begin{bmatrix} B & O \\  O & D \\\end{bmatrix}$.
 
-2) 若$A \sim B$，则$f(A) \sim f(B),\left| f(A) \right| \sim \left| f(B)\right|$，其中$f(A)$为关于$n$阶方阵$A$的多项式。
+2. 若$A \sim B$，则$f(A) \sim f(B),\left| f(A) \right| \sim \left| f(B)\right|$，其中$f(A)$为关于$n$阶方阵$A$的多项式。
 
-3) 若$A$为可对角化矩阵，则其非零特征值的个数(重根重复计算)＝秩($A$)
+3. 若$A$为可对角化矩阵，则其非零特征值的个数(重根重复计算)＝秩($A$)
 
 **4.实对称矩阵的特征值、特征向量及相似对角阵**
 
@@ -520,18 +633,18 @@ ${kλ},{aλ} + b,\lambda^{2},\lambda^{m},f(\lambda),\lambda,\lambda^{- 1},\frac{
 
 (2)相似矩阵的性质：如果$A \sim B$则有：
 
-1) $A^{T} \sim B^{T}$
+1. $A^{T} \sim B^{T}$
 
-2) $A^{- 1} \sim B^{- 1}$ （若$A$，$B$均可逆）
+2. $A^{- 1} \sim B^{- 1}$ （若$A$，$B$均可逆）
 
-3) $A^{k} \sim B^{k}$ （$k$为正整数）
+3. $A^{k} \sim B^{k}$ （$k$为正整数）
 
-4) $\left| {λE} - A \right| = \left| {λE} - B \right|$，从而$A,B$
-有相同的特征值
+4. $\left| {λE} - A \right| = \left| {λE} - B \right|$，从而$A,B$
+   有相同的特征值
 
-5) $\left| A \right| = \left| B \right|$，从而$A,B$同时可逆或者不可逆
+5. $\left| A \right| = \left| B \right|$，从而$A,B$同时可逆或者不可逆
 
-6) 秩$\left( A \right) =$秩$\left( B \right),\left| {λE} - A \right| =\left| {λE} - B \right|$，$A,B$不一定相似
+6. 秩$\left( A \right) =$秩$\left( B \right),\left| {λE} - A \right| =\left| {λE} - B \right|$，$A,B$不一定相似
 
 #### 二次型
 
@@ -575,6 +688,8 @@ $\Leftrightarrow$存在正交矩阵$Q$，使$Q^{T}{AQ} = Q^{- 1}{AQ} =\begin{pma
 
 其中$\lambda_{i} > 0,i = 1,2,\cdots,n.$正定$\Rightarrow {kA}(k >0),A^{T},A^{- 1},A^{*}$正定； $|A| > 0,A$可逆；$a_{{ii}} >0$，且$|A_{{ii}}| > 0$ 。
 
+
+
 ### 概率论和数理统计
 
 #### 随机事件和概率
@@ -595,60 +710,77 @@ $\Leftrightarrow$存在正交矩阵$Q$，使$Q^{T}{AQ} = Q^{- 1}{AQ} =\begin{pma
 
 (7) 互逆事件（对立事件）：
 $A\bigcap B=\varnothing ,A\bigcup B=\Omega ,A=\bar{B},B=\bar{A}$
+
 **2.运算律**
 (1) 交换律：$A\bigcup B=B\bigcup A,A\bigcap B=B\bigcap A$
 (2) 结合律：$(A\bigcup B)\bigcup C=A\bigcup (B\bigcup C)$
 (3) 分配律：$(A\bigcap B)\bigcap C=A\bigcap (B\bigcap C)$
+
 **3.德$\centerdot $摩根律**
 
-$\overline{A\bigcup B}=\bar{A}\bigcap \bar{B}$                 $\overline{A\bigcap B}=\bar{A}\bigcup \bar{B}$
-**4.完全事件组** 
+$\overline{A\bigcup B}=\bar{A}\bigcap \bar{B}$ $\overline{A\bigcap B}=\bar{A}\bigcup \bar{B}$
 
-${{A}_{1}}{{A}_{2}}\cdots {{A}_{n}}$两两互斥，且和事件为必然事件，即${{A}_{i}}\bigcap {{A}_{j}}=\varnothing, i\ne j ,\underset{i=1}{\overset{n}{\mathop \bigcup }}\,=\Omega $
+**4.完全事件组**
+
+${{A}_{1}}{{A}_{2}}\cdots {{A}_{n}}$两两互斥，且和事件为必然事件，即${{A}_{i}}\bigcap {{A}_{j}}=\varnothing, i\ne j ,\underset{i=1}{\overset{n}{\mathop \bigcup }}\,=\Omega$
 
 **5.概率的基本公式**
-(1)条件概率:
- $P(B|A)=\frac{P(AB)}{P(A)}$,表示$A$发生的条件下，$B$发生的概率。
-(2)全概率公式：
-$P(A)=\sum\limits_{i=1}^{n}{P(A|{{B}_{i}})P({{B}_{i}}),{{B}_{i}}{{B}_{j}}}=\varnothing ,i\ne j,\underset{i=1}{\overset{n}{\mathop{\bigcup }}}\,{{B}_{i}}=\Omega $
-(3) Bayes公式：
+**(1)条件概率:**
+$P(B|A)=\frac{P(AB)}{P(A)}$,表示$A$发生的条件下，$B$发生的概率。
+
+**(2)全概率公式：**
+$P(A)=\sum\limits_{i=1}^{n}{P(A|{{B}_{i}})P({{B}_{i}}),{{B}_{i}}{{B}_{j}}}=\varnothing ,i\ne j,\underset{i=1}{\overset{n}{\mathop{\bigcup }}}\,{{B}_{i}}=\Omega$
+
+**(3) Bayes 公式：**
 
 $P({{B}_{j}}|A)=\frac{P(A|{{B}_{j}})P({{B}_{j}})}{\sum\limits_{i=1}^{n}{P(A|{{B}_{i}})P({{B}_{i}})}},j=1,2,\cdots ,n$
 注：上述公式中事件${{B}_{i}}$的个数可为可列个。
-(4)乘法公式：
+
+**(4)乘法公式：**
 $P({{A}_{1}}{{A}_{2}})=P({{A}_{1}})P({{A}_{2}}|{{A}_{1}})=P({{A}_{2}})P({{A}_{1}}|{{A}_{2}})$
 $P({{A}_{1}}{{A}_{2}}\cdots {{A}_{n}})=P({{A}_{1}})P({{A}_{2}}|{{A}_{1}})P({{A}_{3}}|{{A}_{1}}{{A}_{2}})\cdots P({{A}_{n}}|{{A}_{1}}{{A}_{2}}\cdots {{A}_{n-1}})$
 
 **6.事件的独立性**
-(1)$A$与$B$相互独立$\Leftrightarrow P(AB)=P(A)P(B)$
+
+(1)$A$与$B$相互独立
+
+$\Leftrightarrow P(AB)=P(A)P(B)$
+
 (2)$A$，$B$，$C$两两独立
 $\Leftrightarrow P(AB)=P(A)P(B)$;$P(BC)=P(B)P(C)$ ;$P(AC)=P(A)P(C)$;
+
 (3)$A$，$B$，$C$相互独立
-$\Leftrightarrow P(AB)=P(A)P(B)$;     $P(BC)=P(B)P(C)$ ;
-$P(AC)=P(A)P(C)$  ;   $P(ABC)=P(A)P(B)P(C)$
+$\Leftrightarrow P(AB)=P(A)P(B)$; $P(BC)=P(B)P(C)$ ;
+$P(AC)=P(A)P(C)$ ; $P(ABC)=P(A)P(B)P(C)$
 
-**7.独立重复试验** 
+**7.独立重复试验**
 
-将某试验独立重复$n$次，若每次实验中事件A发生的概率为$p$，则$n$次试验中$A$发生$k$次的概率为：
+将某试验独立重复$n$次，若每次实验中事件 A 发生的概率为$p$，则$n$次试验中$A$发生$k$次的概率为：
 $P(X=k)=C_{n}^{k}{{p}^{k}}{{(1-p)}^{n-k}}$
+
 **8.重要公式与结论**
 $(1)P(\bar{A})=1-P(A)$
+
 $(2)P(A\bigcup B)=P(A)+P(B)-P(AB)$
-   $P(A\bigcup B\bigcup C)=P(A)+P(B)+P(C)-P(AB)-P(BC)-P(AC)+P(ABC)$
+$P(A\bigcup B\bigcup C)=P(A)+P(B)+P(C)-P(AB)-P(BC)-P(AC)+P(ABC)$
+
 $(3)P(A-B)=P(A)-P(AB)$
+
 $(4)P(A\bar{B})=P(A)-P(AB),P(A)=P(AB)+P(A\bar{B}),$
- $P(A\bigcup B)=P(A)+P(\bar{A}B)=P(AB)+P(A\bar{B})+P(\bar{A}B)$
+$P(A\bigcup B)=P(A)+P(\bar{A}B)=P(AB)+P(A\bar{B})+P(\bar{A}B)$
+
 (5)条件概率$P(\centerdot |B)$满足概率的所有性质，
 例如：. $P({{\bar{A}}_{1}}|B)=1-P({{A}_{1}}|B)$
 $P({{A}_{1}}\bigcup {{A}_{2}}|B)=P({{A}_{1}}|B)+P({{A}_{2}}|B)-P({{A}_{1}}{{A}_{2}}|B)$
 $P({{A}_{1}}{{A}_{2}}|B)=P({{A}_{1}}|B)P({{A}_{2}}|{{A}_{1}}B)$
+
 (6)若${{A}_{1}},{{A}_{2}},\cdots ,{{A}_{n}}$相互独立，则$P(\bigcap\limits_{i=1}^{n}{{{A}_{i}}})=\prod\limits_{i=1}^{n}{P({{A}_{i}})},$
- $P(\bigcup\limits_{i=1}^{n}{{{A}_{i}}})=\prod\limits_{i=1}^{n}{(1-P({{A}_{i}}))}$
+$P(\bigcup\limits_{i=1}^{n}{{{A}_{i}}})=\prod\limits_{i=1}^{n}{(1-P({{A}_{i}}))}$
+
 (7)互斥、互逆与独立性之间的关系：
 $A$与$B$互逆$\Rightarrow$ $A$与$B$互斥，但反之不成立，$A$与$B$互斥（或互逆）且均非零概率事件$\Rightarrow $$A$与$B$不独立.
-(8)若${{A}_{1}},{{A}_{2}},\cdots ,{{A}_{m}},{{B}_{1}},{{B}_{2}},\cdots ,{{B}_{n}}$相互独立，则$f({{A}_{1}},{{A}_{2}},\cdots ,{{A}_{m}})$与$g({{B}_{1}},{{B}_{2}},\cdots ,{{B}_{n}})$也相互独立，其中$f(\centerdot ),g(\centerdot )$分别表示对相应事件做任意事件运算后所得的事件，另外，概率为1（或0）的事件与任何事件相互独立.
 
-
+(8)若${{A}_{1}},{{A}_{2}},\cdots ,{{A}_{m}},{{B}_{1}},{{B}_{2}},\cdots ,{{B}_{n}}$相互独立，则$f({{A}_{1}},{{A}_{2}},\cdots ,{{A}_{m}})$与$g({{B}_{1}},{{B}_{2}},\cdots ,{{B}_{n}})$也相互独立，其中$f(\centerdot ),g(\centerdot )$分别表示对相应事件做任意事件运算后所得的事件，另外，概率为 1（或 0）的事件与任何事件相互独立.
 
 #### 随机变量及其概率分布
 
@@ -660,11 +792,11 @@ $A$与$B$互逆$\Rightarrow$ $A$与$B$互斥，但反之不成立，$A$与$B$互
 
 定义： $F(x) = P(X \leq x), - \infty < x < + \infty$
 
-性质：(1)$0 \leq F(x) \leq 1$ 
+性质：(1)$0 \leq F(x) \leq 1$
 
 (2) $F(x)$单调不减
 
-(3) 右连续$F(x + 0) = F(x)$ 
+(3) 右连续$F(x + 0) = F(x)$
 
 (4) $F( - \infty) = 0,F( + \infty) = 1$
 
@@ -676,9 +808,9 @@ $P(X = x_{i}) = p_{i},i = 1,2,\cdots,n,\cdots\quad\quad p_{i} \geq 0,\sum_{i =1}
 
 概率密度$f(x)$;非负可积，且:
 
-(1)$f(x) \geq 0,$ 
+(1)$f(x) \geq 0,$
 
-(2)$\int_{- \infty}^{+\infty}{f(x){dx} = 1}$ 
+(2)$\int_{- \infty}^{+\infty}{f(x){dx} = 1}$
 
 (3)$x$为$f(x)$的连续点，则:
 
@@ -686,17 +818,17 @@ $f(x) = F'(x)$分布函数$F(x) = \int_{- \infty}^{x}{f(t){dt}}$
 
 **5.常见分布**
 
-(1) 0-1分布:$P(X = k) = p^{k}{(1 - p)}^{1 - k},k = 0,1$
+(1) 0-1 分布:$P(X = k) = p^{k}{(1 - p)}^{1 - k},k = 0,1$
 
 (2) 二项分布:$B(n,p)$： $P(X = k) = C_{n}^{k}p^{k}{(1 - p)}^{n - k},k =0,1,\cdots,n$
 
 (3) **Poisson**分布:$p(\lambda)$： $P(X = k) = \frac{\lambda^{k}}{k!}e^{-\lambda},\lambda > 0,k = 0,1,2\cdots$
 
-(4) 均匀分布$U(a,b)$：$f(x) = \{ \begin{matrix}  & \frac{1}{b - a},a < x< b \\  & 0, \\ \end{matrix} $
+(4) 均匀分布$U(a,b)$：$f(x) = \{ \begin{matrix}  & \frac{1}{b - a},a < x< b \\  & 0, \\ \end{matrix}$
 
 (5) 正态分布:$N(\mu,\sigma^{2}):$ $\varphi(x) =\frac{1}{\sqrt{2\pi}\sigma}e^{- \frac{{(x - \mu)}^{2}}{2\sigma^{2}}},\sigma > 0,\infty < x < + \infty$
 
-(6)指数分布:$E(\lambda):f(x) =\{ \begin{matrix}  & \lambda e^{-{λx}},x > 0,\lambda > 0 \\  & 0, \\ \end{matrix} $
+(6)指数分布:$E(\lambda):f(x) =\{ \begin{matrix}  & \lambda e^{-{λx}},x > 0,\lambda > 0 \\  & 0, \\ \end{matrix}$
 
 (7)几何分布:$G(p):P(X = k) = {(1 - p)}^{k - 1}p,0 < p < 1,k = 1,2,\cdots.$
 
@@ -745,9 +877,9 @@ $P\{ Y = y_{j}|X = x_{i}\} = \frac{p_{{ij}}}{p_{i \cdot}}$
 
 (1) 联合概率密度$f(x,y):$
 
-1) $f(x,y) \geq 0$ 
+1. $f(x,y) \geq 0$
 
-2) $\int_{- \infty}^{+ \infty}{\int_{- \infty}^{+ \infty}{f(x,y)dxdy}} = 1$
+2. $\int_{- \infty}^{+ \infty}{\int_{- \infty}^{+ \infty}{f(x,y)dxdy}} = 1$
 
 (2) 分布函数：$F(x,y) = \int_{- \infty}^{x}{\int_{- \infty}^{y}{f(u,v)dudv}}$
 
@@ -796,15 +928,15 @@ $f_{Y}(y) = \int_{- \infty}^{+ \infty}{f(x,y)dx}$
 (3) 若$(X,Y)$服从二维正态分布$N(\mu_{1},\mu_{2},\sigma_{1}^{2},\sigma_{2}^{2},\rho)$
 则有：
 
-1) $X\sim N\left( \mu_{1},\sigma_{1}^{2} \right),Y\sim N(\mu_{2},\sigma_{2}^{2}).$
+1. $X\sim N\left( \mu_{1},\sigma_{1}^{2} \right),Y\sim N(\mu_{2},\sigma_{2}^{2}).$
 
-2) $X$与$Y$相互独立$\Leftrightarrow \rho = 0$，即$X$与$Y$不相关。
+2. $X$与$Y$相互独立$\Leftrightarrow \rho = 0$，即$X$与$Y$不相关。
 
-3) $C_{1}X + C_{2}Y\sim N(C_{1}\mu_{1} + C_{2}\mu_{2},C_{1}^{2}\sigma_{1}^{2} + C_{2}^{2}\sigma_{2}^{2} + 2C_{1}C_{2}\sigma_{1}\sigma_{2}\rho)$
+3. $C_{1}X + C_{2}Y\sim N(C_{1}\mu_{1} + C_{2}\mu_{2},C_{1}^{2}\sigma_{1}^{2} + C_{2}^{2}\sigma_{2}^{2} + 2C_{1}C_{2}\sigma_{1}\sigma_{2}\rho)$
 
-4) ${\ X}$关于$Y=y$的条件分布为： $N(\mu_{1} + \rho\frac{\sigma_{1}}{\sigma_{2}}(y - \mu_{2}),\sigma_{1}^{2}(1 - \rho^{2}))$
+4. ${\ X}$关于$Y=y$的条件分布为： $N(\mu_{1} + \rho\frac{\sigma_{1}}{\sigma_{2}}(y - \mu_{2}),\sigma_{1}^{2}(1 - \rho^{2}))$
 
-5) $Y$关于$X = x$的条件分布为： $N(\mu_{2} + \rho\frac{\sigma_{2}}{\sigma_{1}}(x - \mu_{1}),\sigma_{2}^{2}(1 - \rho^{2}))$
+5. $Y$关于$X = x$的条件分布为： $N(\mu_{2} + \rho\frac{\sigma_{2}}{\sigma_{1}}(x - \mu_{1}),\sigma_{2}^{2}(1 - \rho^{2}))$
 
 (4) 若$X$与$Y$独立，且分别服从$N(\mu_{1},\sigma_{1}^{2}),N(\mu_{1},\sigma_{2}^{2}),$
 则：$\left( X,Y \right)\sim N(\mu_{1},\mu_{2},\sigma_{1}^{2},\sigma_{2}^{2},0),$
@@ -827,7 +959,7 @@ $C_{1}X + C_{2}Y\tilde{\ }N(C_{1}\mu_{1} + C_{2}\mu_{2},C_{1}^{2}\sigma_{1}^{2} 
 
 (2) $E(C_{1}X + C_{2}Y) = C_{1}E(X) + C_{2}E(Y)$
 
-(3) 若$X$和$Y$独立，则$E(XY) = E(X)E(Y)$ 
+(3) 若$X$和$Y$独立，则$E(XY) = E(X)E(Y)$
 
 (4)$\left\lbrack E(XY) \right\rbrack^{2} \leq E(X^{2})E(Y^{2})$
 
@@ -847,7 +979,8 @@ $C_{1}X + C_{2}Y\tilde{\ }N(C_{1}\mu_{1} + C_{2}\mu_{2},C_{1}^{2}\sigma_{1}^{2} 
 
 (3)$\ D\left( C_{1}X + C_{2} \right) = C_{1}^{2}D\left( X \right)$
 
-(4) 一般有 $D(X \pm Y) = D(X) + D(Y) \pm 2Cov(X,Y) = D(X) + D(Y) \pm 2\rho\sqrt{D(X)}\sqrt{D(Y)}$
+(4) 一般有 $D(X \pm Y) = D(X) + D(Y) \pm 2Cov(X,Y) = D(X) + D(Y) \pm 
+2\rho\sqrt{D(X)}\sqrt{D(Y)}$
 
 (5)$\ D\left( X \right) < E\left( X - C \right)^{2},C \neq E\left( X \right)$
 
@@ -863,13 +996,13 @@ $X$为连续型：$X\sim f(x),E(Y) = \int_{- \infty}^{+ \infty}{g(x)f(x)dx}$
 
 (2) $Z = g(X,Y)$;$\left( X,Y \right)\sim P\{ X = x_{i},Y = y_{j}\} = p_{{ij}}$; $E(Z) = \sum_{i}^{}{\sum_{j}^{}{g(x_{i},y_{j})p_{{ij}}}}$ $\left( X,Y \right)\sim f(x,y)$;$E(Z) = \int_{- \infty}^{+ \infty}{\int_{- \infty}^{+ \infty}{g(x,y)f(x,y)dxdy}}$
 
-**7.协方差** 
+**7.协方差**
 
 $Cov(X,Y) = E\left\lbrack (X - E(X)(Y - E(Y)) \right\rbrack$
 
 **8.相关系数**
 
- $\rho_{{XY}} = \frac{Cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}$,$k$阶原点矩 $E(X^{k})$;
+$\rho_{{XY}} = \frac{Cov(X,Y)}{\sqrt{D(X)}\sqrt{D(Y)}}$,$k$阶原点矩 $E(X^{k})$;
 $k$阶中心矩 $E\left\{ {\lbrack X - E(X)\rbrack}^{k} \right\}$
 
 性质：
@@ -897,11 +1030,11 @@ $\rho\left( X,Y \right) = - 1 \Leftrightarrow P\left( Y = aX + b \right) = 1$
 
 $\rho\left( X,Y \right) = - 1 \Leftrightarrow P\left( Y = aX + b \right) = 1$，其中$a < 0$
 
-(4) 下面5个条件互为充要条件：
+(4) 下面 5 个条件互为充要条件：
 
 $\rho(X,Y) = 0$ $\Leftrightarrow Cov(X,Y) = 0$ $\Leftrightarrow E(X,Y) = E(X)E(Y)$ $\Leftrightarrow D(X + Y) = D(X) + D(Y)$ $\Leftrightarrow  D(X - Y) = D(X) + D(Y)$
 
-注：$X$与$Y$独立为上述5个条件中任何一个成立的充分条件，但非必要条件。
+注：$X$与$Y$独立为上述 5 个条件中任何一个成立的充分条件，但非必要条件。
 
 #### 数理统计的基本概念
 
@@ -939,11 +1072,11 @@ $F$分布：$F = \frac{X/n_{1}}{Y/n_{2}}\sim F(n_{1},n_{2})$，其中$X\sim\chi^
 
 $\overline{X} = \frac{1}{n}\sum_{i = 1}^{n}X_{i},S^{2} = \frac{1}{n - 1}\sum_{i = 1}^{n}{{(X_{i} - \overline{X})}^{2},}$则：
 
-1) $\overline{X}\sim N\left( \mu,\frac{\sigma^{2}}{n} \right){\ \ }$或者$\frac{\overline{X} - \mu}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)$
+1. $\overline{X}\sim N\left( \mu,\frac{\sigma^{2}}{n} \right){\ \ }$或者$\frac{\overline{X} - \mu}{\frac{\sigma}{\sqrt{n}}}\sim N(0,1)$
 
-2) $\frac{(n - 1)S^{2}}{\sigma^{2}} = \frac{1}{\sigma^{2}}\sum_{i = 1}^{n}{{(X_{i} - \overline{X})}^{2}\sim\chi^{2}(n - 1)}$
+2. $\frac{(n - 1)S^{2}}{\sigma^{2}} = \frac{1}{\sigma^{2}}\sum_{i = 1}^{n}{{(X_{i} - \overline{X})}^{2}\sim\chi^{2}(n - 1)}$
 
-3) $\frac{1}{\sigma^{2}}\sum_{i = 1}^{n}{{(X_{i} - \mu)}^{2}\sim\chi^{2}(n)}$
+3. $\frac{1}{\sigma^{2}}\sum_{i = 1}^{n}{{(X_{i} - \mu)}^{2}\sim\chi^{2}(n)}$
 
 4)${\ \ }\frac{\overline{X} - \mu}{S/\sqrt{n}}\sim t(n - 1)$
 
