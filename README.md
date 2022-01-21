@@ -29,19 +29,15 @@
 2018-3-26 夜
 
 微信公众号：机器学习初学者 ![gongzhong](images/gongzhong.jpg)
-知识星球：黄博的机器学习圈子![xingqiu](images/zhishixingqiu1.jpg)
-
 [我的知乎](https://www.zhihu.com/people/fengdu78/activities)
 
-参考：https://www.coursera.org/course/ml 机器学习公开课
+参考：
 
-https://mooc.guokr.com/note/12/ [小小人_V](https://mooc.guokr.com/user/2133483357/) 的个人笔记
+1. https://www.coursera.org/course/ml 机器学习公开课
+2. https://mooc.guokr.com/note/12/ [小小人_V](https://mooc.guokr.com/user/2133483357/) 的个人笔记
 
-《统计学习方法》李航
-    
-《机器学习课》邹博
-
-**注意：github下载太慢的话，关注我的公众号：“机器学习初学者”，回复“github镜像”即可下载本仓库的镜像文件，整个仓库压缩成一个iso。**
+3. 《统计学习方法》李航   
+4. 《机器学习课》邹博
 
 备注：吴恩达老师的深度学习课（deepLearning.ai）的笔记地址：https://github.com/fengdu78/deeplearning_ai_books
 
@@ -61,15 +57,15 @@ https://mooc.guokr.com/note/12/ [小小人_V](https://mooc.guokr.com/user/213348
 
 **srt**：课程的中英文字幕（**mp4**文件需要在百度云下载，大家可以用记事本或者字幕编辑软件来编辑字幕，共同完善，百度云链接：https://pan.baidu.com/s/1h8QjqBlOm0Exh7orm9teMQ 密码：d3we，下载后解压）
 
-**code**：课程的**python**代码（有一部分是国外大牛写的）
+**code**：课程的**python**代码
 
-机器学习视频下载链接：https://pan.baidu.com/s/1raoOPOg 密码：48m8，包含视频和字幕，下载后解压，建议用**potplayer**播放，此视频与**mp4**一致。
+机器学习课程视频：https://www.bilibili.com/video/BV1W34y1i7xK
 
 [笔记在线阅读](http://www.ai-start.com/ml2014)
 
-笔记pdf版本下载 ：见**github**根目录。
+笔记pdf版本下载 ：见**Github**根目录。
 
-机器学习qq群：704220115（我们有11个群，加过一个就不需要加了）
+机器学习qq群：955171419（我们有13个群，加过一个就不需要加了）
 
 -----------------------
 
@@ -363,5 +359,5 @@ https://mooc.guokr.com/note/12/ [小小人_V](https://mooc.guokr.com/user/213348
 
 
 
-**机器学习qq群：704220115（我们有11个群，加过一个就不需要加了）** 
+**机器学习qq群：955171419（我们有13个群，加过一个就不需要加了）** 
 
