@@ -9,3 +9,5 @@
 将字幕与mp4放在同一目录，用potplayer播放即可。
 
 希望大家能一起完善字幕翻译。
+
+i add something here
