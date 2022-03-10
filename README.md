@@ -55,7 +55,9 @@
 
 **ppt**：课程的原版课件
 
-**srt**：课程的中英文字幕（**mp4**文件需要在百度云下载，大家可以用记事本或者字幕编辑软件来编辑字幕，共同完善，百度云链接：https://pan.baidu.com/s/1h8QjqBlOm0Exh7orm9teMQ 密码：d3we，下载后解压）
+**srt**：课程的中英文字幕（**mp4**文件需要在百度云下载，大家可以用记事本或者字幕编辑软件来编辑字幕，共同完善。
+
+百度云链接：https://pan.baidu.com/s/1h8QjqBlOm0Exh7orm9teMQ 密码：d3we，下载后解压）
 
 **code**：课程的**python**代码
 
